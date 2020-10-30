@@ -1,0 +1,106 @@
+#introduce{
+   margin: 50px 0;
+    display: flex;
+}
+#introduce>div{
+    height:140px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+#introduce>div:first-child{
+    width: 65%;
+    padding:20px;
+    padding-left: 170px;
+    color:#666;
+}
+#introduce>div:first-child>h1{
+    font-weight: normal;
+    color: #000;
+}
+#introduce>div:first-child>p{
+    margin: 15px 0;
+}
+#introduce>div:first-child>div{
+    display: flex;
+    justify-content: space-between;
+}
+#introduce>div:first-child ul{
+    list-style: none;
+    display: flex;
+}
+#introduce>div:first-child ul li~li{
+    margin-left: 15px;
+}
+#introduce>div:last-child{
+    width: 35%;
+    display: flex;
+}
+#introduce>div:last-child>div:first-child{
+    width:90px;
+    height: 90px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 25px 25px;
+}
+#introduce>div:last-child>div:first-child>img{
+    width: 100%;
+}
+#introduce>div:last-child p{
+    font-size: 18px;
+    font-weight: bolder;
+    margin: 20px 0 5px 15px;
+}
+#introduce>div:last-child p+p{
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0 0 15px 15px;
+}
+#introduce>div:last-child button{
+    margin-left: 15px;
+    width: 100px;
+    height: 35px;
+    border: none;
+    border-radius: 8px;
+    background-color: #ff6633;
+}
+#introduce>div:last-child button+button{
+    background-color: transparent;
+    border: 1px solid #666;
+    color: #666;
+}
+/********************************************************/
+.content{
+    font-size: 18px;
+    width: 1000px;
+    margin:100px auto;
+    text-align: center;
+}
+#imgs div{
+  width: 1130px;
+  margin: 35px auto;
+}
+#imgs div img{
+    width: 100%;
+}
+.biglike{
+    width:140px;
+    height: 80px;
+    text-align: center;
+    margin: 80px auto;
+    border-radius: 50px;
+    background-color: #ff6633;
+}
+.biglike.iconfont{
+    font-size: 35px;
+    line-height: 80px;
+}
+#comment{
+    background-color: #ccc;
+}
+#comment>div{
+    width: 1130px;
+    height: 800px;
+    background-color: #fff;
+    margin: 0 auto;
+    border-radius: 20px;
+}
