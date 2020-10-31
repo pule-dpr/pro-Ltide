@@ -1,3 +1,4 @@
+/*作品介绍*/
 #introduce{
    margin: 50px 0;
     display: flex;
@@ -31,6 +32,7 @@
 #introduce>div:first-child ul li~li{
     margin-left: 15px;
 }
+/*作者介绍*/
 #introduce>div:last-child{
     width: 35%;
     display: flex;
@@ -68,13 +70,14 @@
     border: 1px solid #666;
     color: #666;
 }
-/********************************************************/
+/*******************配文*************************************/
 .content{
     font-size: 18px;
     width: 1000px;
     margin:100px auto;
     text-align: center;
 }
+/*大图*/
 #imgs div{
   width: 1130px;
   margin: 35px auto;
@@ -82,21 +85,10 @@
 #imgs div img{
     width: 100%;
 }
-.biglike{
-    width:140px;
-    height:70px;
-    text-align: center;
-    margin: 80px auto;
-    border-radius: 50px;
-    background-color: #ff6633;
-}
-.biglike.iconfont{
-    font-size: 35px;
-    line-height: 70px;
-}
+/*收藏分享*/
 .btns{
     height: 100px;
-    border-top: 1px solid #666;
+    border-top: 1px solid #ccc;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -104,6 +96,7 @@
 .btns p{
     margin-right: 680px;
     font-size: 12px;
+    color: #383838;
 }
 .btns button:last-child{
     margin-right: 200px;
@@ -112,24 +105,35 @@
     margin-left: 15px;
     width: 100px;
     height: 35px;
-    border: 1px solid #666;
-    color: #666;
+    border: 1px solid #ccc;
+    color: #383838;
     border-radius: 8px;
     font-size: 12px;
     background-color: transparent;
 }
+.btns button:hover{
+    border: 1px solid #666;
+    color: #000;
+}
+.btns button:focus{
+    outline: none;
+}
+/*评论*/
 #comment{
-    background-color: #ccc;
+    background-color: #f5f5f5;
 }
 #comment>div{
     width: 1130px;
-    height: 800px;
     background-color: #fff;
     margin: 0 auto;
     border-radius: 20px;
-    margin-top:90px;
+    margin-top:60px;
+    margin-bottom: 40px;
 }
+/*写品论*/
 #textarea{
+    border: 1px solid #ccc;
+    font-size: 14px;
     width: 910px;
     height: 160px;
     margin:40px auto;
@@ -137,9 +141,139 @@
     resize: none;
     border-radius: 30px;
     padding: 40px;
-    background-color: rgb(226, 226, 226);
+    background-color:#f5f5f5;
 }
 #textarea:focus{
     outline: none;
     background-color: transparent;
+}
+#comment .write{
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 40px;
+}
+#comment .write>button{
+    margin-top: -50px;
+    margin-left: 900px;
+    width: 120px;
+    height: 45px;
+    border:none;
+    color: #bbb;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: #f5f5f5;
+    cursor: pointer;
+}
+#comment .write>button:focus{
+    outline: none;
+}
+/*读评论*/
+#comment .read>p{
+    font-size: 14px;
+    font-weight: bold;
+    margin: 40px 0 20px 80px;
+}
+#comment .read>p>span{
+    color: #bbb;
+}
+#comment .read .pl{
+    display: flex;
+    margin: 60px 80px 0px;
+    border-bottom: 1px solid #ccc;
+}
+#comment .read .pl>.left>div{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+#comment .read .pl>.left>div>img{
+    width: 100%;
+}
+#comment .read .pl>.right{
+    width: 100%;
+    margin-left:40px;
+}
+#comment .read .pl>.right>p:first-child{
+    font-size: 18px;
+    font-weight: bolder;
+}
+#comment .read .pl>.right>p+p{
+    height: 50px;
+    color: #666;
+    margin: 30px 20px 0px 20px;
+}
+#comment .read .pl>.right>div{
+    width: 100%;
+    display: flex;
+    color: #ccc;
+    justify-content: space-between;
+    padding-bottom: 15px;
+}
+#comment .read .pl>.right>div>div>span:hover{
+    color: #000;
+}
+#comment .read .pl>.right>div>div>span{
+   margin-right: 30px;
+}
+/*回复*/
+.hf{
+    width: 950px;
+    background-color: #f4f4f4;
+    position: relative;
+    margin-bottom: 15px;
+}
+.hf::before{
+    content: '';
+    display: block;
+    border-top:none ;
+    border-right:15px solid transparent;
+    border-bottom:15px solid #f4f4f4 ;
+    border-left:15px solid transparent ;
+    position: absolute;
+    top:-15px;
+    left:15px;
+}
+.hf #pl.pl{
+    width: 100%;
+    border: none;
+}
+.hf .pl .name{
+    color: #000;
+}
+.read>p:last-child{
+    text-align: center;
+    padding-bottom:30px;
+}
+.read>p:last-child>a{
+    color: #ff6633;
+}
+/*<!--固定导航-->*/
+.fixnav{
+   position: fixed;
+   top:350px;
+   right: 80px;
+   list-style: none;
+}
+.fixnav>li{
+    width: 50px;
+    height: 50px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color:transparent;
+    color: #000;
+    font-size: 25px;
+    line-height: 50px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.fixnav>li:last-child{
+    background-color: rgba(226, 226, 226, .5);
+}
+.fixnav>li:not(:last-child):hover{
+    background-color: #ff6633;
+    color: #fff;
+}
+.fixnav>li.iconfont{
+    font-size: 25px;
+    line-height: 50px;
 }

@@ -22,6 +22,9 @@
     margin-right: 15px;
     color:#cccccc;
 }
+.loginnav li>a{
+    font-weight: bold;
+}
 .classify{
     border-top:1px solid rgb(61, 61, 61);
     border-bottom: 3px solid #000;
