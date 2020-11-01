@@ -1,0 +1,139 @@
+#top .bg{
+    height: 400px;
+}
+#top .bg>img{
+    width: 100%;
+}
+#top .content{
+    display: flex;
+}
+#top .content .tx>div{
+    width: 120px;
+    height:120px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: -50px;
+    margin-left: 50px;
+}
+#top .content .tx>div>img{
+    width: 100%;
+}
+#top .content .basic p{
+    font-size: 24px;
+    font-weight: bolder;
+    margin: 15px 0px 25px 25px;
+}
+#top .content .basic>ul{
+    list-style: none;
+    display: flex;
+}
+#top .content .basic>ul>li{
+    margin-left: 25px;
+}
+#top .content .basic>ul>li>a{
+    font-weight: bolder;
+}
+#top .content .basic>ul>li>a>span{
+    margin-left: 5px;
+    font-weight: normal;
+}
+#top .content .btn{
+    display: flex;
+    flex-direction: column;
+    margin-left: 850px;
+}
+#top .content .btn>button{
+    margin-top: 15px;
+    width: 130px;
+    height: 35px;
+    font-weight: bold;
+    border-radius: 5PX;
+}
+#top .content .btn>button:hover{
+    color: #fff;
+    background-color: #ff6633;
+}
+#top .content .btn>button>span{
+    margin-left: 5px;
+    font-size: 14px;   
+}
+#top .content .btn>button:first-child{
+    font-size: 18px;
+}
+#top .detail{
+    border-bottom: 1px solid #ccc;
+}
+#top .detail .first{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-top: 30px;
+}
+#top .detail .one>span:first-child{
+    font-weight: bolder;
+    margin-left:60px;
+    font-size: 14px;
+    margin-right: 40px;
+}
+#top .detail .first div:last-child{
+    margin-right:220px;
+}
+#top .detail .first div:last-child>a{
+    display: block;
+    width: 10px;
+    height:10px;
+    border: 2px solid #000;
+    border-top: none;
+    border-left: none;
+    transform: rotate(45deg);
+}
+#top .detail .other .one{
+   margin-top: 15px;
+}
+#top .detail .other .update{
+    text-align: center;
+    margin-top: 15px;
+   
+}
+#top .detail .other .update>a{
+    color: #ff6633;
+    font-weight: bolder;
+    display: inline-block;
+    margin-bottom: 30px;
+}
+#top .nav{
+    border-bottom: 1px solid #ccc;
+}
+#top .nav>div{
+    width: 1000px;
+    margin: 0 auto;
+}
+#top .nav div>ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+#top .nav div>ul li{
+    text-align: center;
+    width: 110px;
+   font-size: 16px;
+    height: 60px;
+    line-height: 60px;
+    color: #666;
+    cursor: pointer;
+}
+#top .nav div>ul li:hover{
+    color: #000;
+    border-bottom: 2px solid #000;
+}
+#bot{
+    background-color: #f4f4f4;
+    height: 800px;
+}
+#bot div{
+    background-color: #fff;
+    width: 1000px;
+    height: 600px;
+    margin: 40px auto;
+    border-radius: 15px;
+}
