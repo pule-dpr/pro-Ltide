@@ -75,6 +75,10 @@
     font-size: 14px;
     margin-right: 40px;
 }
+/****************************信息**********************************/
+#top .detail .first{
+    margin-bottom: 25px;
+}
 #top .detail .first div:last-child{
     margin-right:220px;
 }
@@ -86,6 +90,18 @@
     border-top: none;
     border-left: none;
     transform: rotate(45deg);
+}
+#top .detail .first div:last-child>a.active{
+    border: 2px solid #000;
+    border-bottom: none;
+    border-right: none;
+}
+/**********隐藏的部分*********/
+#top .detail .other{
+    display: none;
+}
+#top .detail .other.open{
+    display: block;
 }
 #top .detail .other .one{
    margin-top: 15px;
@@ -121,25 +137,28 @@
     line-height: 60px;
     color: #666;
     cursor: pointer;
+    box-sizing: border-box;
 }
-#top .nav div>ul li:hover{
+#top .nav div>ul>li.active{
     color: #000;
     border-bottom: 2px solid #000;
 }
+
 #bot{
     background-color: #f4f4f4;
-}
-#bot div{
-    background-color:#f4f4f4;
-}
-#bot .pro>p{
+    /* background-image: url(../img/personal/bg2.jpg);
+    background-repeat: no-repeat;
+    background-size:cover; */
+ }
+/***************************作品页***********************************/
+#bot .pro>p,#bot .like>p{
     padding-top: 50px;
     text-align: center;
     font-weight: bolder;
     font-size: 16px;
     color: #666;
 }
-/**************************************************************/
+/***************************作品主体***********************************/
   #list .body{
       margin-top: 20px;
       margin-bottom: 60px;
@@ -216,10 +235,14 @@
     color: #ff6633;
     font-weight: bolder;
 }
-.pro{
+.pro,.collect,.life,.like{
     display: none;
 }
-#bot .collect{
+#bot div.active{
+    display: block;
+}
+/***************************生活页*******收藏页***************************************/
+#bot .life,#bot .collect{
     width: 1130px;
     height:600px;
     border-radius: 15px;
@@ -227,8 +250,9 @@
     margin:60px auto;
     position: relative;
 }
-.collect>img{
+.life>img,.collect>img{
     position: absolute;
     top: 130px;
     left: 400px;
 }
+/****************************喜欢页**********************************/
