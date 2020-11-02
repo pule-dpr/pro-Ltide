@@ -3,6 +3,8 @@ const express=require('express');
 const bodyParser=require('body-parser');
 //导入用户路由
 const userRouter=require('./router/user.js');
+//导入商品路由
+const productRouter=require('./router/product.js');
 //创建服务器
 let app=express();
 //创建端口
@@ -15,4 +17,6 @@ app.use(bodyParser.urlencoded({
 app.use(express.static('public'));
 //挂载用户路由  前缀为/user
 app.use('/user',userRouter);
+//挂在商品路由 前缀为/product
+app.use('product',productRouter);
 

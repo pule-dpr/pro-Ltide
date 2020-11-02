@@ -19,27 +19,27 @@ CREATE TABLE lc_like(
     lid INT PRIMARY KEY AUTO_INCREMENT,
     user_id INT,
     fashion_id INT,         #作品编号
-    like_time BIGINT ,      #喜欢时间
+    like_time BIGINT      #喜欢时间
 );
 /**创建用户关注表**/
 CREATE TABLE lc_attention(
     aid INT PRIMARY KEY AUTO_INCREMENT,
     user_id INT,
-    attention_id INT,       #关注编号
+    attention_id INT       #关注编号
 );
 /**创建用户好友表**/
 CREATE TABLE lc_friends(
     fid INT PRIMARY KEY AUTO_INCREMENT,
     user_id INT,
     friends_id INT,
-    friends_uname VARCHAR(32),  #好友用户名
+    friends_uname VARCHAR(32) #好友用户名
 );
 /**创建用户作品表**/
 CREATE TABLE lc_production(
     pid INT PRIMARY KEY AUTO_INCREMENT,
     user_id INT,
     family_id INT,
-    production_id INT,
+    production_id INT
 );
 /**创建作品类别表**/
 CREATE TABLE lc_fashion_family(
@@ -137,7 +137,7 @@ INSERT INTO lc_fashion_detailed_family VALUES
 (NULL,'板帽',5),
 (NULL,'渔夫帽',5),
 (NULL,'穿搭知识',6),
-(NULL,'颜色搭配',6),
+(NULL,'颜色搭配',6);
 /****/
 /****/
 /****/
