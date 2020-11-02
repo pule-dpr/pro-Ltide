@@ -129,12 +129,12 @@
   }
   #list .body .row li ul li .textcontent{
     width: 270px;
-   margin-left: 45px;
   }
   #list .body .row li ul li .textcontent div{
     margin-bottom: 10px;
     font-size: 12px;
     font-weight: bolder;
+    margin-left: 45px;
   }
   #list .body .row li ul li .textcontent div a{
     color: #000;
