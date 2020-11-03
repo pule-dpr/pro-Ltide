@@ -17,9 +17,10 @@ router.post('/v1/register',(req,res)=>{
     })
 })
 //添加用户登录路由
-router.get('/v1/login:uname&:upwd',(req,res)=>{
+router.get('/v1/login/:uname&:upwd',(req,res)=>{
     var $uname=req.params.uname;
     var $upwd=req.params.upwd;
+    console.log($uname,$upwd);
     var sql='select*from lc_user where uname=? and upwd=?';
     pool.query(sql,[$uname,$upwd],(err,result)=>{
         if(err) throw err;
@@ -31,7 +32,7 @@ router.get('/v1/login:uname&:upwd',(req,res)=>{
     });
 });
 //添加用户检索路由
-router.get('/v1/detail:uid',(req,res)=>{
+router.get('/v1/detail/:uid',(req,res)=>{
     var $uid=req.params.uid;
     var sql='select * from lc_user where uid=?';
     pool.query(sql,[$uid],(err,result)=>{
@@ -44,7 +45,7 @@ router.get('/v1/detail:uid',(req,res)=>{
     });
  });
 //添加用户删除路由
-router.delete('/v1/delete:uid',(req,res)=>{
+router.delete('/v1/delete/:uid',(req,res)=>{
    var $uid=req.params.uid;
    var sql='delete from lc_user where uid=?';
    pool.query(sql,[$uid],(err,result)=>{
@@ -104,7 +105,7 @@ router.get('/v1/phone/:phone',(req,res)=>{
     });
 });
 //检测用户名路由
-router.get('/v1/search:uname',(req,res)=>{
+router.get('/v1/search/:uname',(req,res)=>{
     var $uname=req.params.uname;
     var sql='select*from lc_user where uname=?';
     pool.query(sql,[$uname],(err,result)=>{
