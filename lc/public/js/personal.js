@@ -6,9 +6,9 @@ a.onclick=function(){
     a.classList.toggle('active');
 }
 /***********nav实现**************** */
-var ul=document.querySelector('.nav ul');
+var ul=document.querySelector('.pernav ul');
 ul.onclick=function(e){
-    var rem=document.querySelector(".nav ul>li.active");
+    var rem=document.querySelector(".pernav ul>li.active");
     rem.classList.remove("active");
     var actnav=e.target;
     console.log(actnav);

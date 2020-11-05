@@ -117,19 +117,19 @@
     display: inline-block;
     margin-bottom: 30px;
 }
-#top .nav{
+#top .pernav{
     border-bottom: 1px solid #ccc;
 }
-#top .nav>div{
+#top .pernav>div{
     width: 1000px;
     margin: 0 auto;
 }
-#top .nav div>ul{
+#top .pernav div>ul{
     list-style: none;
     display: flex;
     justify-content: space-around;
 }
-#top .nav div>ul li{
+#top .pernav div>ul li{
     text-align: center;
     width: 110px;
    font-size: 16px;
@@ -139,7 +139,7 @@
     cursor: pointer;
     box-sizing: border-box;
 }
-#top .nav div>ul>li.active{
+#top .pernav div>ul>li.active{
     color: #000;
     border-bottom: 2px solid #000;
 }
