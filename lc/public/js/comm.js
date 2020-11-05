@@ -1,0 +1,16 @@
+
+/****************************请求公共页***********************/
+ajax({
+    url:'header.html',
+    type:'get',
+}).then(result=>{
+    var header=document.querySelector('#header');
+    header.innerHTML=result;
+});
+ajax({
+    url:'footer.html',
+    type:'get',
+}).then(result=>{
+    var footer=document.querySelector('#footer');
+   footer.innerHTML=result;
+});

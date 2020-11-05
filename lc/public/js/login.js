@@ -9,6 +9,7 @@ login.onclick=function(){
     }).then(result=>{
         if(result==1){
             alert('登录成功');
+            location.href='index.html';
         }else{
             alert('登录失败');
         }
@@ -16,7 +17,6 @@ login.onclick=function(){
 }
 /*******************register**ajax******************* */
 var register=document.querySelector('.registerbtn>button');
-console.log(register);
 register.onclick=function(){
     var $setuname=setuname.value;
     var $setupwd=setupwd.value;

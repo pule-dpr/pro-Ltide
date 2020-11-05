@@ -1,37 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <style>
-    table{
-      width: 400px;
-      height: 400px;
-      border: 1px solid #000;
-    }
-    tr,td{
-      border: 1px solid #000;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./img/my_icon/iconfont.css">
+    <link rel="stylesheet" href="./css/comm.css">
+    <link rel="stylesheet" href="./text.css">
 </head>
 <body>
-  <table>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-  </table>
+    <div class="header">
+        <!--nav-->
+        <nav class="clearfix">
+            <!--logo-->
+            <a href="" class="logofl">
+                <img src="img/logo/L潮logo6.png" alt="" class="logo">
+            </a>
+            <div class="login rf">
+                <ul class="loginnav clearfix">
+                    <li>|</li>
+                    <li><a href="#">注册</a></li>
+                    <li>|</li>
+                    <li><a href="./login.html">登录</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!--分页导航栏-->
+        <div class="classify">
+            <div class="classcontent">
+                <ul class="navcontent clearfix">
+                    <li><a href="index.html"> 首页</a></li>
+                    <li><a href="">最新发布</a></li>
+                    <li><a href="#">潮物推荐</a></li>
+                    <li>
+                      <a href="#">潮牌</a>
+                      <div class="nav clearfix" id="pai">
+                        <div class="fl textcontent">
+                          <h4 >分类</h4>
+                          <ul class="sort">
+                              <li><a href="" data-toggle='tab' data-img='./img/chaopai/1.jpg'>Adidas</a></li>
+                              <li><a href="" data-toggle='tab' data-img='./img/chaopai/2.jpg'>Nick</a></li>
+                              <li><a href="" data-toggle='tab' data-img='./img/chaopai/3.jpg'>Puma</a></li>
+                              <li><a href="" data-toggle='tab' data-img='./img/chaopai/4.jpg'>GXG</a></li>
+                              <li><a href="" data-toggle='tab' data-img='./img/chaopai/5.jpg'>Kappa</a></li>
+                              <li><a href="" data-toggle='tab' data-img='./img/chaopai/6.jpg'>Supreme</a></li>
+                              <li><a href="" data-toggle='tab' data-img='./img/chaopai/7.jpg'>优衣库</a></li>
+                              <li><a href="" data-toggle='tab' data-img='./img/chaopai/8.jpg'>彭贝</a></li>
+                              <li><a href="" data-toggle='tab' data-img='./img/chaopai/9.jpg'>其他</a></li>
+                          </ul>
+                        </div>
+                        <div class="fr imgs">
+                          <img src="./img/chaopai/1.jpg" alt="">
+                        </div>
+                    </div>
+                    </li>
+                    <li>
+                      <a href="#">风格</a>
+                      <div class="nav clearfix" id="ge">
+                        <div class="fl textcontent">
+                          <h4 >分类</h4>
+                          <ul class="sort">
+                            <li><a href="" data-toggle='tab' data-img='./img/style/1.jpg'>韩风</a></li>
+                            <li><a href="" data-toggle='tab' data-img='./img/style/2.jpg'>日系</a></li>
+                            <li><a href="" data-toggle='tab' data-img='./img/style/3.jpg'>简约</a></li>
+                            <li><a href="" data-toggle='tab' data-img='./img/style/4.jpg'>运动</a></li>
+                            <li><a href="" data-toggle='tab' data-img='./img/style/5.jpg'>嘻哈</a></li>
+                            <li><a href="" data-toggle='tab' data-img='./img/style/7.jpg'>商务</a></li>
+                            <li><a href="" data-toggle='tab' data-img='./img/style/8.jpg'>休闲</a></li>
+                            <li><a href="" data-toggle='tab' data-img='./img/style/9.jpg'>微胖界</a></li>
+                         </ul>
+                        </div>
+                        <div class="fr imgs">
+                          <img src="./img/style/1.jpg" alt="">
+                        </div>    
+                    </div>
+                    </li>
+                    <li>
+                      <a href="#">配饰</a>
+                      <div class="nav clearfix" id="shi">
+                        <div class="fl textcontent">
+                          <h4 >分类</h4>
+                        <ul class="sort">
+                          <li><a href="" data-toggle='tab' data-img='./img/Acc/1.jpg'>项链</a></li>
+                          <li><a href="" data-toggle='tab' data-img='./img/Acc/2.jpg'>手饰</a></li>                          
+                          <li><a href="" data-toggle='tab' data-img='./img/Acc/4.jpg'>耳环</a></li>
+                          <li><a href="" data-toggle='tab' data-img='./img/Acc/5.jpg'>包</a></li>
+                          <li><a href="" data-toggle='tab' data-img='./img/Acc/6.jpg'>手表</a></li>                           
+                          <li><a href="" data-toggle='tab' data-img='./img/Acc/7.jpg'>头巾</a></li>
+                        </ul>
+                        </div>
+                        <div class="fr imgs">
+                          <img src="./img/Acc/1.jpg" alt="">
+                        </div>
+                    </div>
+                    </li>
+                    <li>
+                      <a href="#">潮鞋</a> 
+                      <div class="nav clearfix" id="xei">
+                        <div class="fl textcontent">
+                          <h4 >分类</h4>
+                          <ul class="sort">
+                            <li><a href="" data-toggle='tab' data-img='./img/shoes/1.jpg'>高帮鞋</a></li>
+                            <li><a href="" data-toggle='tab' data-img='./img/shoes/2.jpg'>帆布鞋</a></li>                         
+                            <li><a href="" data-toggle='tab' data-img='./img/shoes/4.jpg'>运动鞋</a></li>
+                            <li><a href="" data-toggle='tab' data-img='./img/shoes/5.jpg'>皮鞋</a></li>
+                            <li><a href="" data-toggle='tab' data-img='./img/shoes/6.jpg'>板鞋</a></li>                         
+                            <li><a href="" data-toggle='tab' data-img='./img/shoes/7.jpg'>休闲鞋</a></li>
+                            <li><a href="" data-toggle='tab' data-img='./img/shoes/8.jpg'>马丁靴</a></li>                           
+                          </ul>
+                        </div>
+                        <div class="fr imgs">
+                          <img src="./img/shoes/1.jpg" alt="">
+                        </div>
+                    </div>
+                    </li>
+                    <li>
+                      <a href="#">帽子</a>
+                      <div class="nav clearfix" id="zi">
+                        <div class="fl textcontent">
+                          <h4 >分类</h4>
+                        <ul class="sort">
+                            <li><a href="">鸭舌帽</a></li>
+                            <li><a href="">板帽</a></li>
+                            <li><a href="">针织帽</a></li>
+                            <li><a href="">渔夫帽</a></li>
+                            <li><a href="">盆帽</a></li>
+                        </ul>
+                        </div>
+                        <div class="fr imgs">
+                          <img src="./img/maozi/maozi.jpg" alt="">
+                        </div>   
+                    </div>
+                    </li>
+                    <li>
+                      <a href="#">小知识</a>
+                      <div class="nav clearfix" id="xiao">
+                        <div class="fl textcontent">
+                          <h4 >分类</h4>
+                          <ul class="sort">
+                            <li><a href="">色彩搭配</a></li>
+                            <li><a href="">穿搭建议</a></li>
+                            <li><a href="">突显风格</a></li>
+                            <li><a href="">不同天气</a></li>
+                            <li><a href="">不同心情</a></li>
+                            <li><a href="">回头率</a></li>
+                            <li><a href="">小技巧</a></li>
+                          </ul></div>
+                        <div class="fr imgs">
+                          <img src="./img/style/shu.jpg" alt="">
+                        </div>            
+                    </div>
+                    </li> 
+                    <li>
+                       <!--搜索框-->
+                      <div class="searchcontent">
+                        <input type="text" placeholder="你应该会喜欢...">
+                        <span class="iconfont iconchazhao"></span>
+                      </div>
+                    </li>
+                </ul>      
+            </div>
+        </div>
+    </div>
 </body>
 </html>

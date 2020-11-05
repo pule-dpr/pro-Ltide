@@ -1,3 +1,4 @@
+
 var imgs=document.querySelectorAll('.lunbo div');
 var count=0;
 var timer=setInterval(function(){

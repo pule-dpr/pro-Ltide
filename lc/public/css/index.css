@@ -105,11 +105,11 @@
       list-style: none;
   }
   #list .body .row li{
-      margin-top: 15px;
-  }
-  #list .body .row li ul{
-     margin-left: 155px;
-  }
+    margin-top: 15px;
+}
+#list .body .row li ul{
+   margin-left: 155px;
+}
   #list .body .row li ul li{
     width:290px;
     height: 400px;
