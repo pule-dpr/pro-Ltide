@@ -1,10 +1,6 @@
-var name='jay';
-function person(name){
-    this.name=name;
-    console.log(this.name);
-}
-var a=person('tom');
-console.log(name);
-console.log(a);
-var b=new person('monica');
-console.log(b);
+for(var i=0;i<5;i++){
+      setTimeout(function(){
+        console.log(i);
+      },0)
+    }
+    console.log(i);

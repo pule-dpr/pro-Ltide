@@ -3,17 +3,33 @@
      width: 1100px;
      height: 400px;
      background-color: thistle;
-     margin: 0px auto;
+     margin: 30px auto 0px;
      position: relative;
+     overflow: hidden;
+     
+ }
+ .sconed>div>img{
+   width: 100%;
+ }
+ .sconed>.sclunbo{
+  display: none;
+ }
+ .sconed>.sclunbo.active{
+   display: block;
  }
  .sconed>a{
      display: inline-block;
      position: absolute;
      width: 40px;
      height: 70px;
-     background-color: rgba(255, 255, 255,.2);
+     background-color: rgb(255, 255, 255);
+     opacity: 0.2;
     top: 50%;
     margin-top: -35px;
+ }
+ .sconed>a:hover{
+  background-color: rgb(255, 255, 255);
+  opacity: 0.5;
  }
  .sconed>.left::after{
      content: '';
@@ -21,8 +37,8 @@
      height: 10px;
      border-top:none ;
      border-right:none;
-     border-bottom: 1px solid #666;
-     border-left:1px solid #666;
+     border-bottom: 2px solid #333;
+     border-left:2px solid #333;
     transform: rotate(45deg);
     display: block;
     position: absolute;
@@ -34,8 +50,8 @@
     content: '';
     width: 10px;
     height: 10px;
-    border-top:1px solid #666 ;
-    border-right:1px solid #666;
+    border-top:2px solid #333 ;
+    border-right:2px solid #333;
     border-bottom:none ;
     border-left:none;
    transform: rotate(45deg);
