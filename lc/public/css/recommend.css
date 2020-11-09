@@ -74,7 +74,7 @@
      position: absolute;
      left: 50%;
      margin-left:-60px ;
-     bottom: 30px;
+     bottom: 15px;
  }
  .sconed>.circle>ul{
      list-style: none;
@@ -83,9 +83,10 @@
  }
  .sconed>.circle>ul>li{
      display: inline-block;
-     width: 15px;
+     width: 20px;
      height: 5px;
-     background-color: teal;
+     background-color:#fff;
+     opacity: 0.3;
  }
  .sconed>.circle>ul>li~li{
      margin-left: 5px;

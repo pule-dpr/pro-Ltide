@@ -17,6 +17,9 @@
     margin-right: 200px;
     margin-top: 50px;
 }
+.loginnav.yes{
+    margin-right: 100px;
+}
 .loginnav li{
     float: right;
     margin-right: 15px;
