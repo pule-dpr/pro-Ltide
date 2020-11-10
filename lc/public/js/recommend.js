@@ -56,3 +56,13 @@ right.onclick=function(){
         first.classList.add('active');
     }
 };
+/************************************************************************* */
+    var lis=document.querySelectorAll('.xiala>ul>li');
+    for(var li of lis){
+        li.onclick=function(){
+            var xiala=this.parentElement.parentElement;
+            var act=xiala.getElementsByTagName('span')[0];
+            var content=this.innerHTML;
+            act.innerHTML=content;
+        }
+    }

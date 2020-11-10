@@ -18,15 +18,32 @@
     margin-top: 50px;
 }
 .loginnav.yes{
-    margin-right: 100px;
+    margin-right: 50px;
+}
+.loginnav.yes>li:first-child{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-top: -10px;
+    overflow: hidden;
+}
+.loginnav.yes>li:first-child>img{
+    width: 100%;
 }
 .loginnav li{
     float: right;
     margin-right: 15px;
     color:#cccccc;
+    top: -40px;
 }
 .loginnav li>a{
-    font-weight: bold;
+    font-weight:bold;
+    font-size: 12px;
+}
+.loginnav li>a>span{
+    font-size: 14px;
+    font-weight: normal;
+    margin-left: 5px;
 }
 .classify{
     border-top:1px solid rgb(61, 61, 61);
