@@ -56,13 +56,14 @@ CREATE TABLE lc_fashion_detailed_family(
 CREATE TABLE lc_fashion(
     lid INT PRIMARY KEY AUTO_INCREMENT,
     family_id INT,
+    family_detaile_id INT,
     title VARCHAR(128),         #主标题
-    subtitle VARCHAR(128),      #副标题
     name VARCHAR(128),          #作品名称
     details VARCHAR(1024),      #作品详细说明
     issue_time BIGINT,          #发布时间
     is_open BOOLEAN,            #是否公开
-    author_id INT               #作者编号
+    author_id INT,              #作者编号
+    look_count INT              #浏览次数
 );
 /**创建图片表**/
 CREATE TABLE lc_fashion_pic(
@@ -138,8 +139,24 @@ INSERT INTO lc_fashion_detailed_family VALUES
 (NULL,'渔夫帽',5),
 (NULL,'穿搭知识',6),
 (NULL,'颜色搭配',6);
+/**作品表添加作品**/
+INSERT INTO lc_fashion VALUES
+(NULL,2,11,'潮鞋','nike blazer mid 灰黑白 迷彩','Kris这组太帅了，发出来给你们看看','1605077575362',true,1,18676),
+(NULL,2,11,'潮鞋','Adidas 三叶草 新款 高帮','Kris这组太帅了，发出来给你们看看，','1605077575362',true,1,10584),
+(NULL,2,10,'潮鞋','nike air max 97 x undftd联名','Kris这组太帅了，发出来给你们看看，','1605077575362',true,1,25647),
+(NULL,2,7,'潮鞋','万斯 新款 吴亦凡同款 板鞋','Kris这组太帅了，发出来给你们看看，','1605077575362',true,1,26984),
+(NULL,1,6,'配饰','耳机项链 复古 潮流 配饰','Kris这组太帅了，发出来给你们看看，','1605077575362',true,1,16876),
+(NULL,1,6,'配饰','海尔兄弟 工艺品吊坠 潮流','Kris这组太帅了，发出来给你们看看，','1605077575362',true,1,1576),
+(NULL,1,6,'配饰','hip-hop 潮流嘻哈 饰品','Kris这组太帅了，发出来给你们看看，','1605077575362',true,1,18676),
+(NULL,1,6,'配饰','卡洛奇饰品 街头潮人锁骨链','Kris这组太帅了，发出来给你们看看，','1605077575362',true,1,18176),
+(NULL,5,24,'帽子','GD同款 鸭舌帽 潮流','Kris这组太帅了，发出来给你们看看，','1605077575362',true,1,14676),
+(NULL,5,11,'帽子','渔夫帽 吴亦凡同款 潮流','Kris这组太帅了，发出来给你们看看，','1605077575362',true,1,13076),
+(NULL,5,23,'帽子','针织帽 GD同款 新款','Kris这组太帅了，发出来给你们看看，','1605077575362',true,1,11676),
+(NULL,5,25,'帽子','陈冠希代言 男帽 新款','Kris这组太帅了，发出来给你们看看，','1605077575362',true,1,11576);
 /****/
-/****/
+INSERT INTO lc_index_product VALUES
+(NULL,'nike blazer mid 灰黑白 迷彩',);
+
 /****/
 /****/
 /****/

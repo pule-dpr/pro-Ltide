@@ -98,32 +98,32 @@
   }
   #list .body{
       margin-top: 60px;
-      margin-bottom: 100px;
   }
   #list .body .row, #list .body .row li ul.clearfix{
       list-style: none;
   }
   #list .body .row >li{
    margin-bottom: 50px;
+   padding-bottom: 50px;
+  border-bottom: 1px solid #ff6633;
+}
+#list .body .row >li:last-child{
+  margin-bottom: 0px;
+  border: none;
 }
 #list .body .row li .xiala{
-  height: 42px;
-  display: flex;
-  margin-bottom: 50px;
+    margin-left: 190px;
 }
 #list .body .row li .xiala>ul{
   list-style: none;
+  float: left;
   display: none;
 }
-#list .body .row li .xiala:hover ul:first-child{
-  display: flex;
-  flex-direction: row-reverse;
-  margin-left:190px;
+#list .body .row li .xiala:hover ul{
+  display: block;
 }
-#list .body .row li .xiala:hover ul:last-child{
-  display: flex;
-  flex-direction: row;
-  margin-left:166px;
+#list .body .row li .xiala:hover>div.active{
+  margin-left: 0px;
 }
 #list .body .row li .xiala>ul>li{
   width: 110px;
@@ -134,7 +134,8 @@
   color: #ff6633;
   padding: 5px;
   cursor: pointer;
-  border:1px solid #ff6633
+  border:1px solid #ff6633;
+  float: left;
 }
 #list .body .row li .xiala>div.active{
   width: 150px;
@@ -146,8 +147,8 @@
   cursor: pointer;
   border:1px solid #ff6633;
   background-color: #ff6633;
-  position: absolute;
-  left: 680px;
+  float: left;
+  margin-left: 488px;
 }
 #list .body .row li .xiala>ul>li:hover{
   background-color: #ff6633;
@@ -184,9 +185,10 @@
     width:290px;
     height: 400px;
     border: 1px solid #ffffff;
-   float: left;
-   color: 14px;
-   font-weight: normal;
+    float: left;
+    color: 14px;
+    font-weight: normal;
+    margin-top: 80px;
   }
   #list .body .row li ul.clearfix li .img{
       width: 290px;

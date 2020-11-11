@@ -22,3 +22,11 @@ ul.onclick=function(e){
         main.classList.add("active");
     }
 }
+/*****************************更多************************ */
+if(document.querySelector(".float-menu")){
+    var plus = document.querySelector(".plus");
+    var floatMenu = document.querySelector(".float-menu");
+    plus.addEventListener("click", function(){
+        floatMenu.className.indexOf("open") > -1?floatMenu.className = "float-menu":floatMenu.className = "float-menu open";
+    },false);
+}
