@@ -85,7 +85,8 @@ CREATE TABLE lc_index_carousel(
 CREATE TABLE lc_index_product(
   pid INT PRIMARY KEY AUTO_INCREMENT,
   title VARCHAR(64),
-  details VARCHAR(128),
+  look_count INT,
+  author_name VARCHAR(128),
   pic VARCHAR(128),
   href VARCHAR(128),
   seq_recommended TINYINT,
@@ -97,8 +98,19 @@ CREATE TABLE lc_index_product(
 /*******************/
 /**用户信息**/
 INSERT INTO lc_user VALUES
-(NULL, 'lele', '123456', 'lele@qq.com', '19185391324', 'img/avatar/default.png', '蒲乐', '1'),
+(NULL, '无人区玫瑰', '123456', 'lele@qq.com', '19185391324', 'img/avatar/default.png', '蒲乐', '1'),
+(NULL, 'pick 赵小棠', '123456', 'lele@qq.com', '19185391324', 'img/avatar/default.png', '蒲乐', '1'),
+(NULL, 'capper', '123456', 'lele@qq.com', '19185391324', 'img/avatar/default.png', '蒲乐', '1'),
+(NULL, '重庆马思唯', '123456', 'lele@qq.com', '19185391324', 'img/avatar/default.png', '蒲乐', '1'),
+(NULL, '贝贝', '123456', 'lele@qq.com', '19185391324', 'img/avatar/default.png', '蒲乐', '1'),
+(NULL, '橘黄色的柠檬', '123456', 'lele@qq.com', '19185391324', 'img/avatar/default.png', '蒲乐', '1'),
+(NULL, '加拿大的花', '123456', 'lele@qq.com', '19185391324', 'img/avatar/default.png', '蒲乐', '1'),
+(NULL, 'vava', '123456', 'lele@qq.com', '19185391324', 'img/avatar/default.png', '蒲乐', '1'),
+(NULL, '芜湖大司马', '123456', 'lele@qq.com', '19185391324', 'img/avatar/default.png', '蒲乐', '1'),
 (NULL, 'ranran', '123456', 'ranran@123.com', '13593301454', 'img/avatar/default.png', '董沛然', '0'),
+(NULL, '我爱冠希', '123456', 'lele@qq.com', '19185391324', 'img/avatar/default.png', '蒲乐', '1'),
+(NULL, 'lele', '123456', 'lele@qq.com', '19185391324', 'img/avatar/default.png', '蒲乐', '1'),
+(NULL, '-pule-', '123456', 'lele@qq.com', '19185391324', 'img/avatar/default.png', '蒲乐', '1'),
 (NULL, 'lala', '123456', 'lala@qq.com', '18484309810', 'img/avatar/default.png', '王小拉', '0'),
 (NULL, 'yaya', '123456', 'yaya@qq.com', '18198680674', 'img/avatar/default.png', '秦小雅', '0');
 /**作品类别家族**/
@@ -141,7 +153,7 @@ INSERT INTO lc_fashion_detailed_family VALUES
 (NULL,'颜色搭配',6);
 /**作品表添加作品**/
 INSERT INTO lc_fashion VALUES
-(NULL,2,11,'潮鞋','nike blazer mid 灰黑白 迷彩','Kris这组太帅了，发出来给你们看看','1605077575362',true,1,18676),
+(NULL,2,11,'潮鞋','nike blazer mid 灰黑白 迷彩','Kris这组太帅了，发出来给你们看看，配饰z真的很重要，这组菱形耳环虽然很简约，但是搭配这种风格是真的帅！！！！','1605077575362',true,1,18676),
 (NULL,2,11,'潮鞋','Adidas 三叶草 新款 高帮','Kris这组太帅了，发出来给你们看看，','1605077575362',true,1,10584),
 (NULL,2,10,'潮鞋','nike air max 97 x undftd联名','Kris这组太帅了，发出来给你们看看，','1605077575362',true,1,25647),
 (NULL,2,7,'潮鞋','万斯 新款 吴亦凡同款 板鞋','Kris这组太帅了，发出来给你们看看，','1605077575362',true,1,26984),
@@ -150,13 +162,24 @@ INSERT INTO lc_fashion VALUES
 (NULL,1,6,'配饰','hip-hop 潮流嘻哈 饰品','Kris这组太帅了，发出来给你们看看，','1605077575362',true,1,18676),
 (NULL,1,6,'配饰','卡洛奇饰品 街头潮人锁骨链','Kris这组太帅了，发出来给你们看看，','1605077575362',true,1,18176),
 (NULL,5,24,'帽子','GD同款 鸭舌帽 潮流','Kris这组太帅了，发出来给你们看看，','1605077575362',true,1,14676),
-(NULL,5,11,'帽子','渔夫帽 吴亦凡同款 潮流','Kris这组太帅了，发出来给你们看看，','1605077575362',true,1,13076),
+(NULL,5,26,'帽子','渔夫帽 吴亦凡同款 潮流','Kris这组太帅了，发出来给你们看看，','1605077575362',true,1,13076),
 (NULL,5,23,'帽子','针织帽 GD同款 新款','Kris这组太帅了，发出来给你们看看，','1605077575362',true,1,11676),
 (NULL,5,25,'帽子','陈冠希代言 男帽 新款','Kris这组太帅了，发出来给你们看看，','1605077575362',true,1,11576);
-/****/
-INSERT INTO lc_index_product VALUES
-(NULL,'nike blazer mid 灰黑白 迷彩',);
 
+/**首页精选作品**/
+INSERT INTO lc_index_product VALUES
+(NULL,'nike blazer mid 灰黑白 迷彩',18677,'无人区玫瑰','./img/list/1.jpg','detail.html?fid=1',1,1,1),
+(NULL,'Adidas 三叶草 新款 高帮',14567,'pick 赵小棠','./img/list/2.jpg','detail.html?fid=2',2,2,2),
+(NULL,'nike air max 97 x undftd联名',14547,'橘黄色的柠檬','./img/list/3.jpg','detail.html?fid=3',3,3,3),
+(NULL,'万斯 新款 吴亦凡同款 板鞋',15471,'含了巧克力','./img/list/4.jpg','detail.html?fid=4',4,4,4),
+(NULL,'耳机项链 复古 潮流 配饰',12677,'加拿大的花','./img/list/acc1.jpg','detail.html?fid=5',5,5,5),
+(NULL,'海尔兄弟 工艺品吊坠 潮流',15782,'capper','./img/list/acc2.jpg','detail.html?fid=6',6,6,6),
+(NULL,'hip-hop 潮流嘻哈 饰品',11627,'芜湖大司马','./img/list/acc3.jpg','detail.html?fid=7',7,7,7),
+(NULL,'卡洛奇饰品 街头潮人锁骨链',18672,'vava','./img/list/acc4.jpg','detail.html?fid=8',8,8,8),
+(NULL,'GD同款 鸭舌帽 潮流',11377,'快竖起耳朵','./img/list/cap1.jpg','detail.html?fid=9',9,9,9),
+(NULL,'渔夫帽 吴亦凡同款 潮流',4334,'别靠近我这里','./img/list/cap2.jpg','detail.html?fid=10',10,10,10),
+(NULL,'针织帽 GD同款 新款',8272,'冠希哥好帅','./img/list/cap3.jpg','detail.html?fid=11',11,11,11),
+(NULL,'陈冠希代言 男帽 新款',9673,'贝贝','./img/list/cap4.jpg','detail.html?fid=12',12,12,12);
 /****/
 /****/
 /****/

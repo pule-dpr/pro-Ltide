@@ -102,6 +102,8 @@
       margin-bottom: 100px;
   }
   #list .body .row, #list .body .row li ul{
+      margin-bottom: 50px;
+      margin-top: 50px;
       list-style: none;
   }
   #list .body .row li{
