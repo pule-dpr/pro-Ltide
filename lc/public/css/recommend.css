@@ -232,10 +232,14 @@
     font-size: 24px;
     color: #ff6600;
     line-height: 24px;
+    font-weight: normal;
   }
-  #list .body .row li ul.clearfix li~li{
-    margin-left: 15px;      
-}
+  #list .body .row li ul.clearfix li .textcontent div:last-child .tb{
+    width: 25px;
+    height: 25px;
+    margin-left: 15px;
+    margin-bottom: 0;
+  }
 #list .foot{
  margin-top: 60px;
 }

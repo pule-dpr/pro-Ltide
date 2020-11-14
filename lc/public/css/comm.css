@@ -68,3 +68,24 @@ button{
 		transform: translate3d(4px, 0, 0);
 	}
 }
+/******************点赞收藏动画************************/
+.tb{
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size:contain;
+}
+.tb.xh{
+    background-image: url(../img/my_icon/xh.png);
+  }
+.tb.sc{
+    background-image: url(../img/my_icon/sc.png);
+  }
+  #list .body .row li ul.clearfix li~li{
+    margin-left: 15px;      
+}
+.tb.xh.active{
+    background-image: url(../img/my_icon/actxh.png);
+}
+.tb.sc.active{
+    background-image: url(../img/my_icon/actsc.png);
+}

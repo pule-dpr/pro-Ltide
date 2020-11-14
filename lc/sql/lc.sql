@@ -17,16 +17,17 @@ CREATE TABLE lc_user(
 /**创建用户喜欢表**/
 CREATE TABLE lc_like(
     lid INT PRIMARY KEY AUTO_INCREMENT,
-    user_id INT,
     fashion_id INT,         #作品编号
-    like_time BIGINT      #喜欢时间
+    like_time BIGINT,      #喜欢时间
+    user_id INT
 );
 /**创建用户关注表**/
 CREATE TABLE lc_attention(
     aid INT PRIMARY KEY AUTO_INCREMENT,
-    user_id INT,
     attention_id INT       #关注编号
+    user_id INT
 );
+
 /**创建用户好友表**/
 CREATE TABLE lc_friends(
     fid INT PRIMARY KEY AUTO_INCREMENT,
@@ -37,10 +38,10 @@ CREATE TABLE lc_friends(
 /**创建用户作品表**/
 CREATE TABLE lc_production(
     pid INT PRIMARY KEY AUTO_INCREMENT,
-    user_id INT,
-    family_id INT,
-    production_id INT
+    production_id INT,
+    user_id INT
 );
+
 /**创建作品类别表**/
 CREATE TABLE lc_fashion_family(
     fid INT PRIMARY KEY AUTO_INCREMENT,
@@ -65,13 +66,19 @@ CREATE TABLE lc_fashion(
     author_id INT,              #作者编号
     look_count INT              #浏览次数
 );
-/**创建图片表**/
+/**创建作品图片表**/
 CREATE TABLE lc_fashion_pic(
   fid INT PRIMARY KEY AUTO_INCREMENT,
   fashion_id INT,             #作品编号
-  sm VARCHAR(128),            #小图片路径
-  md VARCHAR(128),            #中图片路径
-  lg VARCHAR(128)             #大图片路径
+  m1 VARCHAR(128),            #图片路径
+  m2 VARCHAR(128),            #图片路径
+  m3 VARCHAR(128)             #图片路径
+  m4 VARCHAR(128),            #图片路径
+  m5 VARCHAR(128),            #图片路径
+  m6 VARCHAR(128)             #图片路径
+  m7 VARCHAR(128),            #图片路径
+  m8 VARCHAR(128),            #图片路径
+  m9 VARCHAR(128)             #图片路径
 );
 /****首页轮播广告作品****/
 CREATE TABLE lc_index_carousel(
@@ -180,6 +187,62 @@ INSERT INTO lc_index_product VALUES
 (NULL,'渔夫帽 吴亦凡同款 潮流',4334,'别靠近我这里','./img/list/cap2.jpg','detail.html?fid=10',10,10,10),
 (NULL,'针织帽 GD同款 新款',8272,'冠希哥好帅','./img/list/cap3.jpg','detail.html?fid=11',11,11,11),
 (NULL,'陈冠希代言 男帽 新款',9673,'贝贝','./img/list/cap4.jpg','detail.html?fid=12',12,12,12);
+/**用户喜欢列表**/
+INSERT INTO lc_like VALUES
+(NULL,1,'1605077575362',1),
+(NULL,3,'1605077575362',1),
+(NULL,4,'1605077575362',1),
+(NULL,6,'1605077575362',1),
+(NULL,12,'1605077575362',1),
+(NULL,5,'1605077575362',1),
+(NULL,8,'1605077575362',1),
+(NULL,11,'1605077575362',2),
+(NULL,10,'1605077575362',2),
+(NULL,2,'1605077575362',2),
+(NULL,6,'1605077575362',2),
+(NULL,5,'1605077575362',2),
+(NULL,4,'1605077575362',2),
+(NULL,3,'1605077575362',2),
+(NULL,12,'1605077575362',2),
+(NULL,1,'1605077575362',2);
+/**添加用户关注**/
+ INTO INTO lc_attention VALUES
+ (NULL,1,1),
+ (NULL,2,1),
+ (NULL,3,1),
+ (NULL,4,1),
+ (NULL,5,1),
+ (NULL,6,1),
+ (NULL,7,1),
+ (NULL,8,1),
+ (NULL,9,1),
+ (NULL,10,1),
+ (NULL,11,1),
+ (NULL,12,1),
+ (NULL,13,1),
+ (NULL,14,1),
+ (NULL,15,1);
+ /**用户作品表添加**/
+INSERT INTO lc_production VALUES
+(NULL,1,1),
+(NULL,2,1),
+(NULL,5,1),
+(NULL,6,1),
+(NULL,3,1),
+(NULL,9,1),
+(NULL,4,1),
+(NULL,12,1),
+(NULL,7,1),
+(NULL,8,1);
+/****/
+/********作品图片表***********/
+INSERT INTO lc_fashion_pic VALUES
+(NULL,1,'./img/detail/wyf1.jpg','./img/detail/wyf2.jpg','./img/detail/wyf3.jpg','./img/detail/wyf4.jpg','./img/detail/wyf5.jpg','./img/detail/wyf6.jpg','./img/detail/wyf7.jpg'),
+(NULL,2,'./img/detail/wyf1.jpg','./img/detail/wyf2.jpg','./img/detail/wyf3.jpg','./img/detail/wyf4.jpg','./img/detail/wyf5.jpg','./img/detail/wyf6.jpg','./img/detail/wyf7.jpg'),
+(NULL,3,'./img/detail/wyf1.jpg','./img/detail/wyf2.jpg','./img/detail/wyf3.jpg','./img/detail/wyf4.jpg','./img/detail/wyf5.jpg','./img/detail/wyf6.jpg','./img/detail/wyf7.jpg'),
+(NULL,4,'./img/detail/wyf1.jpg','./img/detail/wyf2.jpg','./img/detail/wyf3.jpg','./img/detail/wyf4.jpg','./img/detail/wyf5.jpg','./img/detail/wyf6.jpg','./img/detail/wyf7.jpg'),
+(NULL,5,'./img/detail/wyf1.jpg','./img/detail/wyf2.jpg','./img/detail/wyf3.jpg','./img/detail/wyf4.jpg','./img/detail/wyf5.jpg','./img/detail/wyf6.jpg','./img/detail/wyf7.jpg'),
+(NULL,6,'./img/detail/wyf1.jpg','./img/detail/wyf2.jpg','./img/detail/wyf3.jpg','./img/detail/wyf4.jpg','./img/detail/wyf5.jpg','./img/detail/wyf6.jpg','./img/detail/wyf7.jpg'),
 /****/
 /****/
 /****/

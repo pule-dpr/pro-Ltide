@@ -33,7 +33,7 @@ ajax({
         </div>
         <div class="textcontent">
           <div>
-            ${s.title}
+          标题：${s.title}
           </div>
           <div>
             浏览次数：<span class=" iconfont iconliulan">${s.look_count}</span>
@@ -57,7 +57,7 @@ ajax({
         </div>
         <div class="textcontent">
           <div>
-            ${a.title}
+            标题：${a.title}
           </div>
           <div>
             浏览次数：<span class=" iconfont iconliulan">${a.look_count}</span>
@@ -81,7 +81,7 @@ ajax({
         </div>
         <div class="textcontent">
           <div>
-            ${c.title}
+          标题：${c.title}
           </div>
           <div>
             浏览次数：<span class=" iconfont iconliulan">${c.look_count}</span>
