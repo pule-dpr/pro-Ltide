@@ -14,3 +14,10 @@ ajax({
     var footer=document.querySelector('#footer');
    footer.innerHTML=result;
 });
+/****************喜欢收藏动画******************************* */
+var a=document.querySelectorAll('#list .body .row li ul.clearfix li .textcontent div:last-child');
+for(var annui of a){
+    annui.onclick=function(e){
+       e.target.classList.toggle('active');
+    }
+}

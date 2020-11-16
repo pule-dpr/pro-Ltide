@@ -1,3 +1,4 @@
+/**********************轮播*************************************************** */
 var sclunbo=document.querySelectorAll('.sconed>.sclunbo');
 var act=document.querySelector('.sconed>.sclunbo.active');
 var num=act.dataset.num;
@@ -20,6 +21,7 @@ var timer=setInterval(function(){
         first.classList.add('active');
     }
 },3000);
+/************************左右箭头和指示器************************************************* */
 var left=document.querySelector('a.left');
 left.onclick=function(){
     var act=document.querySelector('.sconed>.sclunbo.active');
@@ -56,7 +58,7 @@ right.onclick=function(){
         first.classList.add('active');
     }
 };
-/************************************************************************* */
+/*********************************更换内容**************************************** */
     var lis=document.querySelectorAll('.xiala>ul>li');
     for(var li of lis){
         li.onclick=function(){

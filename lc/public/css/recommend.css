@@ -189,6 +189,7 @@
     color: 14px;
     font-weight: normal;
     margin-top: 80px;
+    padding-bottom: 20px;
   }
   #list .body .row li ul.clearfix li .img{
       width: 290px;
@@ -225,6 +226,7 @@
   #list .body .row li ul.clearfix li .textcontent div:last-child{
     display: flex;
     align-items: center;
+    padding-top: 10px;
   }
   #list .body .row li ul.clearfix li .textcontent div:last-child>a~a{
     display: inline-block;

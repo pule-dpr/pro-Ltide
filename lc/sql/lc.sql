@@ -24,7 +24,7 @@ CREATE TABLE lc_like(
 /**创建用户关注表**/
 CREATE TABLE lc_attention(
     aid INT PRIMARY KEY AUTO_INCREMENT,
-    attention_id INT       #关注编号
+    attention_id INT,       #关注编号
     user_id INT
 );
 
@@ -70,15 +70,15 @@ CREATE TABLE lc_fashion(
 CREATE TABLE lc_fashion_pic(
   fid INT PRIMARY KEY AUTO_INCREMENT,
   fashion_id INT,             #作品编号
-  m1 VARCHAR(128),            #图片路径
-  m2 VARCHAR(128),            #图片路径
-  m3 VARCHAR(128)             #图片路径
-  m4 VARCHAR(128),            #图片路径
-  m5 VARCHAR(128),            #图片路径
-  m6 VARCHAR(128)             #图片路径
-  m7 VARCHAR(128),            #图片路径
-  m8 VARCHAR(128),            #图片路径
-  m9 VARCHAR(128)             #图片路径
+  m1 VARCHAR(128) default NULL,            #图片路径
+  m2 VARCHAR(128) default NULL,            #图片路径
+  m3 VARCHAR(128) default NULL,             #图片路径
+  m4 VARCHAR(128) default NULL,            #图片路径
+  m5 VARCHAR(128) default NULL,            #图片路径
+  m6 VARCHAR(128) default NULL,             #图片路径
+  m7 VARCHAR(128) default NULL,            #图片路径
+  m8 VARCHAR(128) default NULL,            #图片路径
+  m9 VARCHAR(128) default NULL            #图片路径
 );
 /****首页轮播广告作品****/
 CREATE TABLE lc_index_carousel(
@@ -206,7 +206,7 @@ INSERT INTO lc_like VALUES
 (NULL,12,'1605077575362',2),
 (NULL,1,'1605077575362',2);
 /**添加用户关注**/
- INTO INTO lc_attention VALUES
+INSERT INTO lc_attention VALUES
  (NULL,1,1),
  (NULL,2,1),
  (NULL,3,1),
@@ -237,12 +237,22 @@ INSERT INTO lc_production VALUES
 /****/
 /********作品图片表***********/
 INSERT INTO lc_fashion_pic VALUES
-(NULL,1,'./img/detail/wyf1.jpg','./img/detail/wyf2.jpg','./img/detail/wyf3.jpg','./img/detail/wyf4.jpg','./img/detail/wyf5.jpg','./img/detail/wyf6.jpg','./img/detail/wyf7.jpg'),
-(NULL,2,'./img/detail/wyf1.jpg','./img/detail/wyf2.jpg','./img/detail/wyf3.jpg','./img/detail/wyf4.jpg','./img/detail/wyf5.jpg','./img/detail/wyf6.jpg','./img/detail/wyf7.jpg'),
-(NULL,3,'./img/detail/wyf1.jpg','./img/detail/wyf2.jpg','./img/detail/wyf3.jpg','./img/detail/wyf4.jpg','./img/detail/wyf5.jpg','./img/detail/wyf6.jpg','./img/detail/wyf7.jpg'),
-(NULL,4,'./img/detail/wyf1.jpg','./img/detail/wyf2.jpg','./img/detail/wyf3.jpg','./img/detail/wyf4.jpg','./img/detail/wyf5.jpg','./img/detail/wyf6.jpg','./img/detail/wyf7.jpg'),
-(NULL,5,'./img/detail/wyf1.jpg','./img/detail/wyf2.jpg','./img/detail/wyf3.jpg','./img/detail/wyf4.jpg','./img/detail/wyf5.jpg','./img/detail/wyf6.jpg','./img/detail/wyf7.jpg'),
-(NULL,6,'./img/detail/wyf1.jpg','./img/detail/wyf2.jpg','./img/detail/wyf3.jpg','./img/detail/wyf4.jpg','./img/detail/wyf5.jpg','./img/detail/wyf6.jpg','./img/detail/wyf7.jpg'),
+(NULL,1,'./img/detail/wyf1.jpg','./img/detail/wyf2.jpg','./img/detail/wyf3.jpg','./img/detail/wyf4.jpg','./img/detail/wyf5.jpg','./img/detail/wyf6.jpg','./img/detail/wyf7.jpg',default,default),
+(NULL,2,'./img/detail/wyf3.jpg','./img/detail/wyf2.jpg','./img/detail/wyf1.jpg','./img/detail/wyf4.jpg','./img/detail/wyf5.jpg','./img/detail/wyf6.jpg','./img/detail/wyf7.jpg',default,default),
+(NULL,3,'./img/detail/wyf5.jpg','./img/detail/wyf2.jpg','./img/detail/wyf3.jpg','./img/detail/wyf4.jpg','./img/detail/wyf1.jpg','./img/detail/wyf6.jpg','./img/detail/wyf7.jpg',default,default),
+(NULL,4,'./img/detail/wyf7.jpg','./img/detail/wyf2.jpg','./img/detail/wyf3.jpg','./img/detail/wyf4.jpg','./img/detail/wyf5.jpg','./img/detail/wyf6.jpg','./img/detail/wyf1.jpg',default,default),
+(NULL,5,'./img/detail/wyf2.jpg','./img/detail/wyf1.jpg','./img/detail/wyf3.jpg','./img/detail/wyf4.jpg','./img/detail/wyf5.jpg','./img/detail/wyf6.jpg','./img/detail/wyf7.jpg',default,default),
+(NULL,6,'./img/detail/wyf1.jpg','./img/detail/wyf2.jpg','./img/detail/wyf3.jpg','./img/detail/wyf4.jpg','./img/detail/wyf5.jpg','./img/detail/wyf6.jpg','./img/detail/wyf7.jpg',default,default),
+(NULL,7,'./img/detail/wyf3.jpg','./img/detail/wyf2.jpg','./img/detail/wyf1.jpg','./img/detail/wyf4.jpg','./img/detail/wyf5.jpg','./img/detail/wyf6.jpg','./img/detail/wyf7.jpg',default,default),
+(NULL,8,'./img/detail/wyf5.jpg','./img/detail/wyf2.jpg','./img/detail/wyf3.jpg','./img/detail/wyf4.jpg','./img/detail/wyf1.jpg','./img/detail/wyf6.jpg','./img/detail/wyf7.jpg',default,default),
+(NULL,9,'./img/detail/wyf7.jpg','./img/detail/wyf2.jpg','./img/detail/wyf3.jpg','./img/detail/wyf4.jpg','./img/detail/wyf5.jpg','./img/detail/wyf6.jpg','./img/detail/wyf1.jpg',default,default),
+(NULL,10,'./img/detail/wyf2.jpg','./img/detail/wyf1.jpg','./img/detail/wyf3.jpg','./img/detail/wyf4.jpg','./img/detail/wyf5.jpg','./img/detail/wyf6.jpg','./img/detail/wyf7.jpg',default,default),
+(NULL,11,'./img/detail/wyf1.jpg','./img/detail/wyf2.jpg','./img/detail/wyf3.jpg','./img/detail/wyf4.jpg','./img/detail/wyf5.jpg','./img/detail/wyf6.jpg','./img/detail/wyf7.jpg',default,default),
+(NULL,12,'./img/detail/wyf3.jpg','./img/detail/wyf2.jpg','./img/detail/wyf1.jpg','./img/detail/wyf4.jpg','./img/detail/wyf5.jpg','./img/detail/wyf6.jpg','./img/detail/wyf7.jpg',default,default),
+(NULL,13,'./img/detail/wyf5.jpg','./img/detail/wyf2.jpg','./img/detail/wyf3.jpg','./img/detail/wyf4.jpg','./img/detail/wyf1.jpg','./img/detail/wyf6.jpg','./img/detail/wyf7.jpg',default,default),
+(NULL,14,'./img/detail/wyf7.jpg','./img/detail/wyf2.jpg','./img/detail/wyf3.jpg','./img/detail/wyf4.jpg','./img/detail/wyf5.jpg','./img/detail/wyf6.jpg','./img/detail/wyf1.jpg',default,default),
+(NULL,15,'./img/detail/wyf2.jpg','./img/detail/wyf1.jpg','./img/detail/wyf3.jpg','./img/detail/wyf4.jpg','./img/detail/wyf5.jpg','./img/detail/wyf6.jpg','./img/detail/wyf7.jpg',default,default),
+(NULL,16,'./img/detail/wyf4.jpg','./img/detail/wyf2.jpg','./img/detail/wyf3.jpg','./img/detail/wyf1.jpg','./img/detail/wyf5.jpg','./img/detail/wyf6.jpg','./img/detail/wyf7.jpg',default,default);
 /****/
 /****/
 /****/

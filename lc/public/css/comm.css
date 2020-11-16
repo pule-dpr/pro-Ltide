@@ -70,22 +70,39 @@ button{
 }
 /******************点赞收藏动画************************/
 .tb{
+    width: 25px;
+    height: 25px;
+    margin-left: 15px !important;
+    margin-bottom: 0 !important;
     cursor: pointer;
     background-repeat: no-repeat;
     background-size:contain;
 }
 .tb.xh{
     background-image: url(../img/my_icon/xh.png);
+    transition: 2s;
   }
 .tb.sc{
     background-image: url(../img/my_icon/sc.png);
+    transition: 2s;
   }
   #list .body .row li ul.clearfix li~li{
     margin-left: 15px;      
 }
 .tb.xh.active{
     background-image: url(../img/my_icon/actxh.png);
+    animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
 }
 .tb.sc.active{
     background-image: url(../img/my_icon/actsc.png);
+    animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
+}
+#list .body .row li ul.clearfix li:hover{
+    border: 1px solid #fff;
+    box-shadow: 0 0 5px 1px  #dddddd;
+    transition: 1.5s;
+}
+#list .body .row li ul.clearfix li:hover .img>img{
+    transform: scale(1.1);
+    transition: 2s;
 }
