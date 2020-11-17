@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./img/my_icon/iconfont.css">
+    <link rel="stylesheet" href="./css/comm.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <script src="./js/ajax.js"></script>
+    <script src="./js/comm.js"></script>
+</head>
+<body>
+    <header id="header"></header>
+    <div class="contain">
+        <!--登录和注册-->
+        <div class="loginmain">
+            <ul class="loginheader">
+                <li class="check" data-btn="tab" data-divid="logincontent">登录</li>
+                <li data-btn="tab" data-divid="registercontent">注册</li>
+            </ul>
+            <!--登录-->
+            <div class="logincontent active" id="logincontent">
+                <div class="loginput">
+                    <label for="uname">用户名：</label> 
+                    <div>
+                        <input type="text" placeholder="请输入用户名或手机号" id="uname">
+                    </div>
+                    <label for="upwd">&nbsp;&nbsp;&nbsp;密码：</label> 
+                    <div>
+                        <input type="password" placeholder="请输入密码" id="upwd">
+                    </div>
+                </div>
+                <div class="fgupwd">
+                    <a href="">忘记密码 ？</a>
+                </div>
+               <div class="loginbtn">
+                    <button>登录</button>
+               </div>
+            </div>
+              <!--注册-->
+            <div class="registermain" id="registercontent">
+                <div class="registercontent" >
+                    <div class="registerput">
+                        <label for="uname">用户名：</label> 
+                        <div>
+                            <input type="text" placeholder="请输入用户名" id="setuname">
+                        </div>
+                        <label for="upwd" class="ml">设置密码：</label> 
+                        <div>
+                            <input type="text" placeholder="请输入6~12位密码" id="setupwd">
+                        </div>
+                        <label for="upwdagain" class="ml">确认密码：</label> 
+                        <div>
+                            <input type="text" placeholder="请再次输入密码" id="againupwd">
+                        </div>
+                        <label for="upwd">手机号：</label> 
+                        <div>
+                            <input type="text" placeholder="请输入手机号" id="phone">
+                        </div>
+                    </div>
+                    <div class="registerbtn">
+                        <button>注册</button>
+                   </div>
+                   <div class="yes">
+                       <input type="checkbox" checked>
+                       <span></span>
+                       <span>我已阅读并同意L tide隐私权声明</span>
+                   </div>
+                </div>
+            </div>
+        </div>  
+    </div>
+      <footer id="footer"></footer>
+   <script src="./js/login.js"></script>
+   <script src="./js/jquery-1.11.3.js"></script>
+   <script src="./js/header.js"></script>
+</body>
+</html>

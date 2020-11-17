@@ -1,0 +1,70 @@
+/*footer*/
+.footer{
+    border-top: 2px solid #424040;
+    background-color: #474747;
+    padding-bottom: 30px;
+}
+.footer .footermain div{
+    width: 290px;
+    background-color:transparent;
+    float: left;
+    margin-top: 40px;
+    margin-left: 100px;
+    color: #fff;
+    padding-left: 100px;
+    box-sizing: border-box;
+    font-weight: normal;
+    font-size: 12px;
+    position: relative;
+}
+.footer .footermain div ul{
+    list-style: none;
+    padding: 0px;
+    color:#cccccc;
+    
+}
+.footer .footermain div h3{
+    border-bottom: 1px solid #cccccc;
+    padding-bottom: 15px;
+}
+.footer .footermain div ul li{
+    margin-top: 40px;
+}
+.footer .footermain div ul li~li{
+    margin-top: 20px;
+}
+.footer .footermain div ul li input{
+    padding: 10px 10px;
+    border: none;
+    outline: none;
+}
+.footer .footermain div ul li button{
+    width: 120px;
+    height: 35px;
+    background-color:#ee9a39;
+    border-radius: 5px;
+    outline: none;
+}
+.footer .footermain div .erweima{
+    position: absolute;
+    right: 10px;
+    top: 35px;
+}
+.footer .footermain div .erweima p{
+    padding-left: 15px;
+}
+.footer .footermain .last{
+    width:600px;
+}
+.footermain::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.footer .banquan{
+    font-weight: normal;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 60px;
+    color: #cccccc;
+}

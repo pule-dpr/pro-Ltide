@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/comm.css">  <!---->
+    <link rel="stylesheet" href="./css/recommend.css">
+    <script src="./js/ajax.js"></script>
+    <script src="./js/comm.js"></script>
+</head>
+<body>
+    <header id="header"></header>
+      <div class="container">
+        <!--轮播图-->
+        <div class="sconed">
+          <!--图-->
+          <div class="sclunbo active" data-num="1">
+            <img src="./img/bg/sc4.jpg" alt="">
+          </div>
+          <div  class="sclunbo" data-num="2">
+            <img src="./img/bg/sc2.jpg" alt="">
+          </div>
+          <div  class="sclunbo" data-num="3">
+            <img src="./img/bg/sc3.jpg" alt="">
+          </div>
+          <div  class="sclunbo" data-num="4">
+            <img src="./img/bg/sc5.jpg" alt="">
+          </div>
+          <div  class="sclunbo last" data-num="5">
+            <img src="./img/bg/sc1.jpg" alt="">
+          </div>
+           <!--箭头-->
+           <a href="javascript:;" class="left"></a>
+           <a href="javascript:;" class="right"></a>
+            <!--指示器-->
+            <div class="circle">
+              <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+            </div>
+        </div>
+      <!--作品主体-->
+        <div id="list">
+                      <div class="body">
+                        <ul class="row">
+                          <li>
+                            <div class="xiala">
+                              <ul>
+                                <li>高帮鞋</li>
+                                <li>帆布鞋</li>
+                                <li>运动鞋</li>
+                                <li>凉鞋</li>
+                              </ul>
+                              <div class="active">潮鞋 | <span>shoese</span></div>
+                              <ul>
+                                <li>皮鞋</li>
+                                <li>板鞋</li>
+                                <li>休闲鞋</li>
+                                <li>马丁靴</li>
+                              </ul>
+                            </div>
+                            <ul class="clearfix">
+                              <li>
+                                <div class="img">
+                                  <img src="./img/list/1.jpg" alt="">
+                                </div>
+                                <div class="textcontent">
+                                  <div>
+                                    标题：nike blazer mid 灰黑白 迷彩
+                                  </div>
+                                  <div>
+                                    浏览次数：<span class=" iconfont iconliulan">18676</span>
+                                  </div>
+                                  <div>
+                                    发布人：<a href="">无人区玫瑰</a> 
+                                  </div>
+                                 <div>
+                                   <a href="detail.html">查看详情</a>
+                                   <div class="tb xh"></div>
+                                   <div class="tb sc"></div>
+                                   <a href="" class=" iconfont iconfenxiang"></a>
+                                 </div>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="img">
+                                  <img src="./img/list/2.jpg" alt="">
+                                </div>
+                                <div class="textcontent">
+                                  <div>
+                                    标题：Adidas 三叶草 新款 高帮
+                                  </div>
+                                  <div>
+                                    浏览次数：<span class=" iconfont iconliulan">10584</span>
+                                  </div>
+                                  <div>
+                                    发布人：<a href="">pick 赵小棠</a> 
+                                  </div>
+                                 <div>
+                                   <a href="">查看详情</a>
+                                   <div class="tb xh"></div>
+                                   <div class="tb sc"></div>
+                                   <a href="" class=" iconfont iconfenxiang"></a>
+                                 </div>
+                                </div>
+                              </li> 
+                              <li>
+                                <div class="img">
+                                  <img src="./img/list/3.jpg" alt="">
+                                </div>
+                                <div class="textcontent">
+                                  <div>
+                                    标题：nike air max 97 x undftd联名
+                                  </div>
+                                  <div>
+                                    浏览次数：<span class=" iconfont iconliulan">25647</span>
+                                  </div>
+                                  <div>
+                                    发布人：<a href="">橘黄色的柠檬</a> 
+                                  </div>
+                                 <div>
+                                   <a href="">查看详情</a>
+                                   <div class="tb xh"></div>
+                                   <div class="tb sc"></div>
+                                   <a href="" class=" iconfont iconfenxiang"></a>
+                                 </div>
+                                </div>
+                              </li> 
+                              <li>
+                                <div class="img">
+                                  <img src="./img/list/4.jpg" alt="">
+                                </div>
+                                <div class="textcontent">
+                                  <div>
+                                    标题：万斯 新款 吴亦凡同款 板鞋
+                                  </div>
+                                  <div>
+                                    浏览次数：<span class=" iconfont iconliulan">26984</span>
+                                  </div>
+                                  <div>
+                                    发布人：<a href="">含了巧克力</a> 
+                                  </div>
+                                 <div>
+                                   <a href="">查看详情</a>
+                                   <div class="tb xh"></div>
+                                   <div class="tb sc"></div>
+                                   <a href="" class=" iconfont iconfenxiang"></a>
+                                 </div>
+                                </div>
+                              </li>
+                            </ul>
+                            <div class="foot">
+                              <a href="" class="dou">换一批 >></a>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="xiala">
+                              <ul>
+                                <li>耳环</li>
+                                <li>挂饰</li>
+                                <li>戒指</li>
+                                <li>手表</li>
+                              </ul>
+                              <div class="active">配饰 | <span>ACC</span></div>
+                              <ul>
+                                <li>包</li>
+                                <li>项链</li>
+                                <li>头巾</li>
+                                <li>耳钉</li>
+                              </ul>
+                            </div>
+                            <ul class="clearfix">
+                              <li>
+                                <div class="img">
+                                  <img src="./img/list/acc1.jpg" alt="">
+                                </div>
+                                <div class="textcontent">
+                                  <div>
+                                    标题：耳机项链 复古 潮流 配饰
+                                  </div>
+                                  <div>
+                                    浏览次数：<span class=" iconfont iconliulan">26556</span>
+                                  </div>
+                                  <div>
+                                    发布人：<a href="">capper</a> 
+                                  </div>
+                                 <div>
+                                   <a href="">查看详情</a>
+                                   <div class="tb xh"></div>
+                                   <div class="tb sc"></div>
+                                   <a href="" class=" iconfont iconfenxiang"></a>
+                                 </div>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="img">
+                                  <img src="./img/list/acc2.jpg" alt="">
+                                </div>
+                                <div class="textcontent">
+                                  <div>
+                                    标题：海尔兄弟 工艺品吊坠 潮流
+                                  </div>
+                                  <div>
+                                    浏览次数：<span class=" iconfont iconliulan">16859</span>
+                                  </div>
+                                  <div>
+                                    发布人：<a href="">快竖起耳朵</a> 
+                                  </div>
+                                 <div>
+                                   <a href="">查看详情</a>
+                                   <div class="tb xh"></div>
+                                   <div class="tb sc"></div>
+                                   <a href="" class=" iconfont iconfenxiang"></a>
+                                 </div>
+                                </div>
+                              </li> 
+                              <li>
+                                <div class="img">
+                                  <img src="./img/list/acc3.jpg" alt="">
+                                </div>
+                                <div class="textcontent">
+                                  <div>
+                                    标题：hip-hop 潮流嘻哈 饰品
+                                  </div>
+                                  <div>
+                                    浏览次数：<span class=" iconfont iconliulan">17658</span>
+                                  </div>
+                                  <div>
+                                    发布人：<a href="">加拿大的花</a> 
+                                  </div>
+                                 <div>
+                                   <a href="">查看详情</a>
+                                   <div class="tb xh"></div>
+                                   <div class="tb sc"></div>
+                                   <a href="" class=" iconfont iconfenxiang"></a>
+                                 </div>
+                                </div>
+                              </li> 
+                              <li>
+                                <div class="img">
+                                  <img src="./img/list/acc4.jpg" alt="">
+                                </div>
+                                <div class="textcontent">
+                                  <div>
+                                    标题：卡洛奇饰品 街头潮人锁骨链
+                                  </div>
+                                  <div>
+                                    浏览次数：<span class=" iconfont iconliulan">19856</span>
+                                  </div>
+                                  <div>
+                                    发布人：<a href="">别靠近我这里</a> 
+                                  </div>
+                                 <div>
+                                   <a href="">查看详情</a>
+                                   <div class="tb xh"></div>
+                                   <div class="tb sc"></div>
+                                   <a href="" class=" iconfont iconfenxiang"></a>
+                                 </div>
+                                </div>
+                              </li>
+                            </ul>
+                            <div class="foot">
+                              <a href="" class="dou">换一批 >></a>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="xiala">
+                              <ul>
+                                <li>板帽</li>
+                                <li>针织帽</li>
+                                <li>盆帽</li>
+                                <li>棒球帽</li>
+                              </ul>
+                              <div class="active">潮帽 | <span>CAPS</span></div>
+                              <ul>
+                                <li>鸭舌帽</li>
+                                <li>渔夫帽</li>
+                                <li>瓜皮帽</li>
+                                <li>爵士帽</li>
+                              </ul>
+                            </div>
+                            <ul class="clearfix">
+                              <li>
+                                <div class="img">
+                                  <img src="./img/list/cap1.jpg" alt="">
+                                </div>
+                                <div class="textcontent">
+                                  <div>
+                                    标题：GD同款 鸭舌帽 潮流
+                                  </div>
+                                  <div>
+                                    浏览次数：<span class=" iconfont iconliulan">21589</span>
+                                  </div>
+                                  <div>
+                                    发布人：<a href="">芜湖大司马</a> 
+                                  </div>
+                                 <div>
+                                   <a href="">查看详情</a>
+                                   <a href=""  class=" iconfont iconxihuan"></a>
+                                   <a href="" class=" iconfont iconxingji"></a>
+                                   <a href="" class=" iconfont iconfenxiang"></a>
+                                 </div>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="img">
+                                  <img src="./img/list/cap2.jpg" alt="">
+                                </div>
+                                <div class="textcontent">
+                                  <div>
+                                    标题：渔夫帽 吴亦凡同款 潮流
+                                  </div>
+                                  <div>
+                                    浏览次数：<span class=" iconfont iconliulan">18659</span>
+                                  </div>
+                                  <div>
+                                    发布人：<a href="">vava</a> 
+                                  </div>
+                                 <div>
+                                   <a href="">查看详情</a>
+                                   <a href=""  class=" iconfont iconxihuan"></a>
+                                   <a href="" class=" iconfont iconxingji"></a>
+                                   <a href="" class=" iconfont iconfenxiang"></a>
+                                 </div>
+                                </div>
+                              </li> 
+                              <li>
+                                <div class="img">
+                                  <img src="./img/list/cap3.jpg" alt="">
+                                </div>
+                                <div class="textcontent">
+                                  <div>
+                                    标题：针织帽 GD同款 新款
+                                  </div>
+                                  <div>
+                                    浏览次数：<span class=" iconfont iconliulan">17658</span>
+                                  </div>
+                                  <div>
+                                    发布人：<a href="">贝贝</a> 
+                                  </div>
+                                 <div>
+                                   <a href="">查看详情</a>
+                                   <a href=""  class=" iconfont iconxihuan"></a>
+                                   <a href="" class=" iconfont iconxingji"></a>
+                                   <a href="" class=" iconfont iconfenxiang"></a>
+                                 </div>
+                                </div>
+                              </li> 
+                              <li>
+                                <div class="img">
+                                  <img src="./img/list/cap4.jpg" alt="">
+                                </div>
+                                <div class="textcontent">
+                                  <div>
+                                    标题：陈冠希代言 男帽 新款
+                                  </div>
+                                  <div>
+                                    浏览次数：<span class=" iconfont iconliulan">24856</span>
+                                  </div>
+                                  <div>
+                                    发布人：<a href="">冠希哥好帅</a> 
+                                  </div>
+                                 <div>
+                                   <a href="">查看详情</a>
+                                   <a href=""  class=" iconfont iconxihuan"></a>
+                                   <a href="" class=" iconfont iconxingji"></a>
+                                   <a href="" class=" iconfont iconfenxiang"></a>
+                                 </div>
+                                </div>
+                              </li>
+                            </ul>
+                            <div class="foot">
+                              <a href="" class="dou">换一批 >></a>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="xiala">
+                              <ul>
+                                <li>板帽</li>
+                                <li>针织帽</li>
+                                <li>盆帽</li>
+                                <li>棒球帽</li>
+                              </ul>
+                              <div class="active">潮牌 | <span>Brand</span></div>
+                              <ul>
+                                <li>鸭舌帽</li>
+                                <li>渔夫帽</li>
+                                <li>瓜皮帽</li>
+                                <li>爵士帽</li>
+                              </ul>
+                            </div>
+                            <ul class="clearfix">
+                              <li>
+                                <div class="img">
+                                  <img src="./img/list/cap1.jpg" alt="">
+                                </div>
+                                <div class="textcontent">
+                                  <div>
+                                    标题：GD同款 鸭舌帽 潮流
+                                  </div>
+                                  <div>
+                                    浏览次数：<span class=" iconfont iconliulan">21589</span>
+                                  </div>
+                                  <div>
+                                    发布人：<a href="">芜湖大司马</a> 
+                                  </div>
+                                 <div>
+                                   <a href="">查看详情</a>
+                                   <a href=""  class=" iconfont iconxihuan"></a>
+                                   <a href="" class=" iconfont iconxingji"></a>
+                                   <a href="" class=" iconfont iconfenxiang"></a>
+                                 </div>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="img">
+                                  <img src="./img/list/cap2.jpg" alt="">
+                                </div>
+                                <div class="textcontent">
+                                  <div>
+                                    标题：渔夫帽 吴亦凡同款 潮流
+                                  </div>
+                                  <div>
+                                    浏览次数：<span class=" iconfont iconliulan">18659</span>
+                                  </div>
+                                  <div>
+                                    发布人：<a href="">vava</a> 
+                                  </div>
+                                 <div>
+                                   <a href="">查看详情</a>
+                                   <a href=""  class=" iconfont iconxihuan"></a>
+                                   <a href="" class=" iconfont iconxingji"></a>
+                                   <a href="" class=" iconfont iconfenxiang"></a>
+                                 </div>
+                                </div>
+                              </li> 
+                              <li>
+                                <div class="img">
+                                  <img src="./img/list/cap3.jpg" alt="">
+                                </div>
+                                <div class="textcontent">
+                                  <div>
+                                    标题：针织帽 GD同款 新款
+                                  </div>
+                                  <div>
+                                    浏览次数：<span class=" iconfont iconliulan">17658</span>
+                                  </div>
+                                  <div>
+                                    发布人：<a href="">贝贝</a> 
+                                  </div>
+                                 <div>
+                                   <a href="">查看详情</a>
+                                   <a href=""  class=" iconfont iconxihuan"></a>
+                                   <a href="" class=" iconfont iconxingji"></a>
+                                   <a href="" class=" iconfont iconfenxiang"></a>
+                                 </div>
+                                </div>
+                              </li> 
+                              <li>
+                                <div class="img">
+                                  <img src="./img/list/cap4.jpg" alt="">
+                                </div>
+                                <div class="textcontent">
+                                  <div>
+                                    标题：陈冠希代言 男帽 新款
+                                  </div>
+                                  <div>
+                                    浏览次数：<span class=" iconfont iconliulan">24856</span>
+                                  </div>
+                                  <div>
+                                    发布人：<a href="">冠希哥好帅</a> 
+                                  </div>
+                                 <div>
+                                   <a href="">查看详情</a>
+                                   <a href=""  class=" iconfont iconxihuan"></a>
+                                   <a href="" class=" iconfont iconxingji"></a>
+                                   <a href="" class=" iconfont iconfenxiang"></a>
+                                 </div>
+                                </div>
+                              </li>
+                            </ul>
+                            <div class="foot">
+                              <a href="" class="dou">换一批 >></a>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="xiala">
+                              <ul>
+                                <li>板帽</li>
+                                <li>针织帽</li>
+                                <li>盆帽</li>
+                                <li>棒球帽</li>
+                              </ul>
+                              <div class="active">风格 | <span>Style</span></div>
+                              <ul>
+                                <li>鸭舌帽</li>
+                                <li>渔夫帽</li>
+                                <li>瓜皮帽</li>
+                                <li>爵士帽</li>
+                              </ul>
+                            </div>
+                            <ul class="clearfix">
+                              <li>
+                                <div class="img">
+                                  <img src="./img/list/cap1.jpg" alt="">
+                                </div>
+                                <div class="textcontent">
+                                  <div>
+                                    标题：GD同款 鸭舌帽 潮流
+                                  </div>
+                                  <div>
+                                    浏览次数：<span class=" iconfont iconliulan">21589</span>
+                                  </div>
+                                  <div>
+                                    发布人：<a href="">芜湖大司马</a> 
+                                  </div>
+                                 <div>
+                                   <a href="">查看详情</a>
+                                   <a href=""  class=" iconfont iconxihuan"></a>
+                                   <a href="" class=" iconfont iconxingji"></a>
+                                   <a href="" class=" iconfont iconfenxiang"></a>
+                                 </div>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="img">
+                                  <img src="./img/list/cap2.jpg" alt="">
+                                </div>
+                                <div class="textcontent">
+                                  <div>
+                                    标题：渔夫帽 吴亦凡同款 潮流
+                                  </div>
+                                  <div>
+                                    浏览次数：<span class=" iconfont iconliulan">18659</span>
+                                  </div>
+                                  <div>
+                                    发布人：<a href="">vava</a> 
+                                  </div>
+                                 <div>
+                                   <a href="">查看详情</a>
+                                   <a href=""  class=" iconfont iconxihuan"></a>
+                                   <a href="" class=" iconfont iconxingji"></a>
+                                   <a href="" class=" iconfont iconfenxiang"></a>
+                                 </div>
+                                </div>
+                              </li> 
+                              <li>
+                                <div class="img">
+                                  <img src="./img/list/cap3.jpg" alt="">
+                                </div>
+                                <div class="textcontent">
+                                  <div>
+                                    标题：针织帽 GD同款 新款
+                                  </div>
+                                  <div>
+                                    浏览次数：<span class=" iconfont iconliulan">17658</span>
+                                  </div>
+                                  <div>
+                                    发布人：<a href="">贝贝</a> 
+                                  </div>
+                                 <div>
+                                   <a href="">查看详情</a>
+                                   <a href=""  class=" iconfont iconxihuan"></a>
+                                   <a href="" class=" iconfont iconxingji"></a>
+                                   <a href="" class=" iconfont iconfenxiang"></a>
+                                 </div>
+                                </div>
+                              </li> 
+                              <li>
+                                <div class="img">
+                                  <img src="./img/list/cap4.jpg" alt="">
+                                </div>
+                                <div class="textcontent">
+                                  <div>
+                                    标题：陈冠希代言 男帽 新款
+                                  </div>
+                                  <div>
+                                    浏览次数：<span class=" iconfont iconliulan">24856</span>
+                                  </div>
+                                  <div>
+                                    发布人：<a href="">冠希哥好帅</a> 
+                                  </div>
+                                 <div>
+                                   <a href="">查看详情</a>
+                                   <a href=""  class=" iconfont iconxihuan"></a>
+                                   <a href="" class=" iconfont iconxingji"></a>
+                                   <a href="" class=" iconfont iconfenxiang"></a>
+                                 </div>
+                                </div>
+                              </li>
+                            </ul>
+                            <div class="foot">
+                              <a href="" class="dou">换一批 >></a>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="xiala">
+                              <ul>
+                                <li>色彩搭配</li>
+                                <li>穿搭建议</li>
+                                <li>突显风格</li>
+                                <li>不同天气</li>
+                              </ul>
+                              <div class="active"><span>小知识</span></div>
+                              <ul>
+                                <li>不同心情</li>
+                                <li>回头率</li>
+                                <li>小技巧</li>
+                                <li>一起交流</li>
+                              </ul>
+                            </div>
+                            <ul class="clearfix">
+                              <li>
+                                <div class="img">
+                                  <img src="./img/list/cap1.jpg" alt="">
+                                </div>
+                                <div class="textcontent">
+                                  <div>
+                                    标题：GD同款 鸭舌帽 潮流
+                                  </div>
+                                  <div>
+                                    浏览次数：<span class=" iconfont iconliulan">21589</span>
+                                  </div>
+                                  <div>
+                                    发布人：<a href="">芜湖大司马</a> 
+                                  </div>
+                                 <div>
+                                   <a href="">查看详情</a>
+                                   <a href=""  class=" iconfont iconxihuan"></a>
+                                   <a href="" class=" iconfont iconxingji"></a>
+                                   <a href="" class=" iconfont iconfenxiang"></a>
+                                 </div>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="img">
+                                  <img src="./img/list/cap2.jpg" alt="">
+                                </div>
+                                <div class="textcontent">
+                                  <div>
+                                    标题：渔夫帽 吴亦凡同款 潮流
+                                  </div>
+                                  <div>
+                                    浏览次数：<span class=" iconfont iconliulan">18659</span>
+                                  </div>
+                                  <div>
+                                    发布人：<a href="">vava</a> 
+                                  </div>
+                                 <div>
+                                   <a href="">查看详情</a>
+                                   <a href=""  class=" iconfont iconxihuan"></a>
+                                   <a href="" class=" iconfont iconxingji"></a>
+                                   <a href="" class=" iconfont iconfenxiang"></a>
+                                 </div>
+                                </div>
+                              </li> 
+                              <li>
+                                <div class="img">
+                                  <img src="./img/list/cap3.jpg" alt="">
+                                </div>
+                                <div class="textcontent">
+                                  <div>
+                                    标题：针织帽 GD同款 新款
+                                  </div>
+                                  <div>
+                                    浏览次数：<span class=" iconfont iconliulan">17658</span>
+                                  </div>
+                                  <div>
+                                    发布人：<a href="">贝贝</a> 
+                                  </div>
+                                 <div>
+                                   <a href="">查看详情</a>
+                                   <a href=""  class=" iconfont iconxihuan"></a>
+                                   <a href="" class=" iconfont iconxingji"></a>
+                                   <a href="" class=" iconfont iconfenxiang"></a>
+                                 </div>
+                                </div>
+                              </li> 
+                              <li>
+                                <div class="img">
+                                  <img src="./img/list/cap4.jpg" alt="">
+                                </div>
+                                <div class="textcontent">
+                                  <div>
+                                    标题：陈冠希代言 男帽 新款
+                                  </div>
+                                  <div>
+                                    浏览次数：<span class=" iconfont iconliulan">24856</span>
+                                  </div>
+                                  <div>
+                                    发布人：<a href="">冠希哥好帅</a> 
+                                  </div>
+                                 <div>
+                                   <a href="">查看详情</a>
+                                   <a href=""  class=" iconfont iconxihuan"></a>
+                                   <a href="" class=" iconfont iconxingji"></a>
+                                   <a href="" class=" iconfont iconfenxiang"></a>
+                                 </div>
+                                </div>
+                              </li>
+                            </ul>
+                            <div class="foot">
+                              <a href="" class="dou">换一批 >></a>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+        </div>
+      </div>
+    <footer id="footer"></footer>
+    <script src="./js/recommend.js"></script>
+    <script src="./js/comm.js"></script>
+</body>
+</html>
