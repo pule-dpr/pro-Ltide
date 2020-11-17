@@ -123,7 +123,7 @@
   display: block;
 }
 #list .body .row li .xiala:hover>div.active{
-  margin-left: 0px;
+  margin-left:0px;
 }
 #list .body .row li .xiala>ul>li{
   width: 110px;

@@ -31,3 +31,15 @@ if(document.querySelector(".float-menu")){
     },false);
 }
 /***************************ajax请求我的作品********************************** */
+var gz=document.querySelector('#top .content .btn>button:first-child');
+gz.onclick=function(){
+    this.classList.toggle('active');
+    var act=document.querySelector('#top .content .btn>button:first-child.active');
+    if(act!=null){
+        this.innerHTML='<span>已关注</span>';
+        this.style.backgroundColor='#ff6633';
+    }else{
+        this.innerHTML='＋<span>关注</span>';
+        this.style.backgroundColor='#efefef';
+    }
+}

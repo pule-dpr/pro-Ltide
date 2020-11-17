@@ -49,10 +49,6 @@
     font-weight: bold;
     border-radius: 5PX;
 }
-#top .content .btn>button:hover{
-    color: #fff;
-    background-color: #ff6633;
-}
 #top .content .btn>button>span{
     margin-left: 5px;
     font-size: 14px;   
@@ -60,6 +56,10 @@
 #top .content .btn>button:first-child{
     font-size: 18px;
 }
+#top .content .btn>button:first-child.active{
+    animation: rubberBand 1s;
+}
+
 #top .detail{
     border-bottom: 1px solid #ccc;
 }

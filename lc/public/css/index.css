@@ -19,6 +19,7 @@
     height:800px;
     
   }
+  /*******************九宫格**************************/
   .container .row{
     border: 20px solid #663399;;
     width: 1020px;
@@ -40,11 +41,60 @@
     overflow: hidden;
     float: left;
   }
-  .column-left div:nth-child(2) div img{
-    width: 100%;;
-  }
+
   .column-left div img{
    width: 100%;
+  }
+  .column-left div img.cover-img1{
+   position: absolute;
+   z-index: 10;
+   width: 680px;
+   height: 340px;
+   left: 0px;
+   opacity: 0;
+   transition:all .6s linear 0s;
+  }
+  .column-left div img.cover-img1:hover{
+    opacity: 1;
+    transition:all .6s linear 0s;
+  }
+  .column-left div img.cover-img2{
+    position: absolute;
+    z-index: 5;
+    width: 340px;
+    height: 340px;
+    left: 340px;
+    opacity: 0;
+    transition:all .5s linear 0s;
+   }
+   .column-left div img.cover-img2:hover{
+    opacity: 1;
+    transition:all .5s linear 0s;
+  }
+  .column-right{
+    position: relative;
+  }
+  .column-right div img.cover-img{
+    position: absolute;
+    z-index: 5;
+    width: 340px;
+    height: 680px;
+    left:0px;
+    top:340px;
+    opacity: 0;
+    transition:all .5s linear 0s;
+   }
+   .column-right div img.cover-img:hover{
+    opacity: 1;
+    transform: rotateX(-360deg);
+    transition:all .5s linear 0s;
+  }
+  .column-left div img.big{
+    transition: all .5s linear 0s;
+  }
+  .column-left div img.big:hover{
+    transform: scale(1.1);
+    transition: all .5s linear 0s;
   }
   .column-right div:first-child{
     width:340px;
@@ -55,8 +105,8 @@
     height:680px;
     overflow: hidden;
   }
-  .column-right div:last-child img{
-    height:100%;
+  .column-right div:last-child img:first-child{
+    height: 100%;
   }
   #contain .about-us{
     width: 100%;

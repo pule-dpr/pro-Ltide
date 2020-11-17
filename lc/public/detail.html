@@ -7,19 +7,65 @@
     <link rel="stylesheet" href="./css/comm.css"> <!---->
     <link rel="stylesheet" href="./css/detail.css">
     <link rel="stylesheet" href="./img/my_icon/iconfont.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <script src="./js/ajax.js"></script>
     <script src="./js/comm.js"></script>
-    <script src="./js/detail.js"></script>
+   
 </head>
 <body>
     <header id="header"></header>
       <div class="container">
+           <!--私聊对话框-->
+           <div id="siliao">
+               <div class="uname">无人区玫瑰</div>
+               <div>
+                <div class="write">
+                    <textarea type="text" id="textarea" placeholder="说点什么..."></textarea>
+                    <button class="fs">发送</button>
+                    <button class="qx">取消</button>
+                 </div>
+               </div>
+               <i class="close">×</i>
+           </div>
+            <!--分享弹出框-->
+            <div id="fx">
+                <div>想要分享到</div>
+                <div class="other"> 
+                    <div>
+                        <div>
+                            <img src="./img/my_icon/wx.png" alt="">
+                        </div>
+                        <p>微信</p> 
+                    </div>
+                    <div>
+                        <div>
+                            <img src="./img/my_icon/QQ.png" alt="">
+                        </div>
+                        <p>QQ</p> 
+                    </div> <div>
+                        <div>
+                            <img src="./img/my_icon/wb.png" alt="">
+                        </div>
+                        <p>微博</p> 
+                    </div> <div>
+                        <div>
+                            <img src="./img/my_icon/pyq.png" alt="">
+                        </div>
+                        <p>朋友圈</p> 
+                    </div>
+                </div>
+                <i class="close">×</i>
+            </div>
           <!--固定导航-->
           <ul class="fixnav">
-              <li class="iconfont iconxihuan"></li>
-              <li class="iconfont iconxingji"></li>
-              <li class="iconfont iconfenxiang"></li>
-              <li>^</li>
+              <li class="dh xh">
+              </li>
+              <li class="dh sc">
+              </li>
+              <li>
+                <img src="./img/my_icon/fx.png" alt="">
+              </li>
+              <li><a href="#"><img src="./img/my_icon/fh.png" alt=""></a></li>
           </ul>
         <!--介绍与作者-->
         <div id="introduce">
@@ -58,7 +104,7 @@
                 <div>
                     <p>无人区玫瑰</p>
                     <p>新疆 | 男</p>
-                    <button>关注</button>
+                    <button class="animate__animated">关注</button>
                     <button>私信</button>
                 </div>
             </div>
@@ -243,5 +289,6 @@
         </div>
       </div>
     <footer id="footer"></footer>
+    <script src="./js/detail.js"></script>
 </body>
 </html>

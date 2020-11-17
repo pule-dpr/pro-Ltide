@@ -19,6 +19,7 @@
 }
 .loginnav.yes{
     margin-right: 50px;
+    margin-bottom: 0px;
 }
 .loginnav.yes>li:first-child{
     width: 40px;
