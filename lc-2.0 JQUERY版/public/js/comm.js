@@ -27,11 +27,15 @@ $(function(){
         type: "text/css",
         href: "./css/footer.css"
     });
+    $("head").append("<link>");
+    $("head").children(":last").attr({
+        rel: "stylesheet",
+        type: "text/css",
+        href: "https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    });
   });
 /****************喜欢收藏动画******************************* */
-var a=document.querySelectorAll('#list .body .row li ul.clearfix li .textcontent div:last-child');
-for(var annui of a){
-    annui.onclick=function(e){
-       e.target.classList.toggle('active');
-    }
-}
+$('#list .body .row li ul.clearfix li .textcontent div:last-child').click(function(e){
+    $(e.target).toggleClass('active');
+  }
+)

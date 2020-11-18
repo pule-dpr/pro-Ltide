@@ -151,7 +151,7 @@
     background-size:cover; */
  }
 /***************************作品页*********喜欢页************************************/
-#bot .pro>p,#bot .like>p{
+#bot #pro>p,#bot #like>p{
     padding-top: 50px;
     text-align: center;
     font-weight: bolder;
@@ -235,14 +235,14 @@
     color: #ff6633;
     font-weight: bolder;
 }
-.pro,.collect,.life,.like{
+#pro,#collect,#life,#like{
     display: none;
 }
 #bot div.active{
     display: block;
 }
 /***************************生活页*******收藏页***************************************/
-#bot .life,#bot .collect{
+#bot #life,#bot #collect{
     width: 1130px;
     height:600px;
     border-radius: 15px;
@@ -250,7 +250,7 @@
     margin:60px auto;
     position: relative;
 }
-.life>img,.collect>img{
+#life>img,#collect>img{
     position: absolute;
     top: 130px;
     left: 400px;

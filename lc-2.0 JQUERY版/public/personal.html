@@ -4,12 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/comm.css">  <!---->
     <link rel="stylesheet" href="./css/personal.css">
-    <link rel="stylesheet" href="./img/my_icon/iconfont.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <script src="./js/ajax.js"></script>
-    <script src="./js/comm.js"></script>
 </head>
 <body>
   <header id="header"></header>
@@ -90,7 +85,7 @@
         <!--下半部-->
         <div id="bot" class="clearfix">
           <!--作品页-->
-          <div class="pro active">
+          <div class="active" id="pro">
             <p>共有12个作品</p>
              <!--作品主体-->
              <div id="list">
@@ -368,15 +363,15 @@
           </div>
           </div>
           <!--生活页-->
-          <div class="life">
+          <div id="life">
             <img src="./img/personal/empty.png" alt="">
           </div>
           <!--收藏页-->
-          <div class="collect">
+          <div id="collect">
               <img src="./img/personal/empty.png" alt="">
           </div>
           <!--喜欢页-->
-          <div class="like">
+          <div id="like">
             <p>共有168个喜欢</p>
             <!--作品主体-->
             <div id="list">
@@ -667,6 +662,8 @@
 	<!-- 代码部分end -->
       </div>
     <footer id="footer"></footer>
+      <script src="./js/jquery-1.11.3.js"></script>
       <script src="./js/personal.js"></script>
+      <script src="./js/comm.js"></script>
 </body>
 </html>

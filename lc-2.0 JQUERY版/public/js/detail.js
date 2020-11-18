@@ -1,5 +1,6 @@
+$(()=>{
 var fid=location.search.slice(5);
-ajax({
+$.ajax({
     url:`/product/v1/detail/${fid}`,
     type:'get',
     datatype:'json',
@@ -13,57 +14,34 @@ ajax({
                 </div>`;
         }
     }
-   document.querySelector('#imgs').innerHTML=html;
+   $('#imgs').html(html);
 });
-/**************关注************************ */
-var btngz=document.querySelector('#introduce>div:last-child button');
-    btngz.onclick=function(){
-        this.classList.toggle('active');
-        var act=document.querySelector('#introduce>div:last-child button.active');
-        if(act!=null){
-            this.innerHTML='已关注';
-        }else{
-            this.innerHTML='关注';
-        }
+    /**************关注************************ */
+    $('#introduce>div:last-child .guanzhu').click(function(){
+        $(this).toggleClass('active');
+        $('#introduce>div:last-child button.active').length>0?$(this).html('已关注'):$(this).html('关注');
+    })
+    /*************私信************************* */
+    $('#introduce>div:last-child .sixin').click(()=>{
+    $('#siliao').css('display','block');
+    $('#siliao .close').click(function(){
+        $('#siliao').css('display','none');
+    })
+    $('#siliao .write>button.qx').click(function(){
+        $('#siliao').css('display','none');
+    })
+    })
+    /*************分享********************** */
+    var fx=function(){
+    $('#fx').css('display','block');
+    $('#fx .close').click(function(){
+        $('#fx').css('display','none');
+    })
     }
-/*************私信************************* */
-var btnsx=document.querySelector('#introduce>div:last-child button:last-child');
-btnsx.onclick=function(){
-    var sx=document.querySelector('#siliao');
-    sx.style.display='block';
-    var close=document.querySelector('#siliao .close');
-    close.onclick=function(){
-        sx.style.display='none';
-    }
-    var qx=document.querySelector('#siliao .write>button.qx');
-    qx.onclick=function(){
-        sx.style.display='none';
-    }
-}
-/*************分享********************** */
-var btnfx=document.querySelector('.fixnav>li:nth-child(3)');
-btnfx.onclick=function(){
-    var fx=document.querySelector('#fx');
-    fx.style.display='block';
-    var close=document.querySelector('#fx .close');
-    close.onclick=function(){
-        fx.style.display='none';
-    }
-}
-var btnfx2=document.querySelector('.btns>button:last-child');
-btnfx2.onclick=function(){
-    var fx=document.querySelector('#fx');
-    fx.style.display='block';
-    var close=document.querySelector('#fx .close');
-    close.onclick=function(){
-        fx.style.display='none';
-    }
-}
-/*************固定栏的喜欢收藏交互********************** */
-var dhs=document.querySelectorAll('.fixnav>li.dh');
-console.log(dhs);
-for(var dh of dhs){
-    dh.onclick=function(){
-        this.classList.toggle('active');
-    }
-}
+    $('.fixnav>li:nth-child(3)').click(fx);
+    $('.btns>button:last-child').click(fx);
+    /*************固定栏的喜欢收藏交互********************** */
+    $('.fixnav>li.dh').click(function(){
+        $(this).toggleClass('active');
+    })
+});

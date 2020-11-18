@@ -86,26 +86,24 @@ $.ajax({
     $('#shoese').html(html1);
     $('#accs').html(html2);
     $('#caps').html(html3)
-    var a=document.querySelectorAll('#list .body .row li ul.clearfix li .textcontent div:last-child');
-    for(var annui of a){
-        annui.onclick=function(e){
-          e.target.classList.toggle('active');
-        }  
-      }
+  /*************主页作品喜欢收藏动画******************* */
+    $('#list .body .row li ul.clearfix li .textcontent div:last-child').click(function(e){
+          $(e.target).toggleClass('active');
+        }
+    )
 });
+ 
 /*************图片轮播********************* */
-var imgs=document.querySelectorAll('.lunbo div');
-var count=0;
-var timer=setInterval(function(){
-    var act=document.querySelector('.lunbo .active');
-    if(count<3){
-        act.classList.remove('active');
-        act.nextElementSibling.classList.add('active');
-        count++
-    }else{
-        act.classList.remove('active');
-        var first=act.parentElement.firstElementChild;
-        first.classList.add('active');
-        count=0;
-    }
-},2000);
+$(window).load(function(){
+  var count=0;
+  var timer=setInterval(function(){
+      var $act=$('.lunbo .active');
+      if(count<3){
+          $act.next().addClass('active').siblings().removeClass('active');
+          count++
+      }else{
+          $('.lunbo>div:first-child').addClass('active').siblings().removeClass('active');
+          count=0;
+      }
+  },2000);
+})
