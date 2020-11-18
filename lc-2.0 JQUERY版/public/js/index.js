@@ -1,6 +1,6 @@
 
 /*************ajax请求主页作品******************* */
-ajax({
+$.ajax({
     url:'/index/',
     type:'get',
     datatype:'json'
@@ -83,9 +83,9 @@ ajax({
         </div>
       </li>`
     }
-    document.getElementById('shoese').innerHTML=html1;
-    document.getElementById('accs').innerHTML=html2;
-    document.getElementById('caps').innerHTML=html3;
+    $('#shoese').html(html1);
+    $('#accs').html(html2);
+    $('#caps').html(html3)
     var a=document.querySelectorAll('#list .body .row li ul.clearfix li .textcontent div:last-child');
     for(var annui of a){
         annui.onclick=function(e){
@@ -93,7 +93,7 @@ ajax({
         }  
       }
 });
-
+/*************图片轮播********************* */
 var imgs=document.querySelectorAll('.lunbo div');
 var count=0;
 var timer=setInterval(function(){
