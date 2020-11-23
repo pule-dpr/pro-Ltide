@@ -1,70 +1,65 @@
 /**********************轮播*************************************************** */
-var sclunbo=document.querySelectorAll('.sconed>.sclunbo');
-var act=document.querySelector('.sconed>.sclunbo.active');
-var num=act.dataset.num;
-var actli=document.querySelector(`.circle>ul>li:nth-child(${num})`);
-actli.style.opacity='1';
 var timer=setInterval(function(){
-    var act=document.querySelector('.sconed>.sclunbo.active');
-    var num=act.dataset.num;
-    var actli=document.querySelector(`.circle>ul>li:nth-child(${num})`);
-    actli.style.opacity='0.2';
+    var num=$('.sconed>.sclunbo.active').attr('data-num');
     if(num<5){
-        act.classList.remove('active');
-        act.nextElementSibling.classList.add('active');
-        actli.nextElementSibling.style.opacity='1';
+        $('.sconed>.sclunbo.active').next().addClass('active').siblings().removeClass('active');
     }else{
-        act.classList.remove('active');
-        var firstli=document.querySelector(`.circle>ul>li:nth-child(1)`);
-        firstli.style.opacity='1';
-        var first=act.parentElement.firstElementChild;
-        first.classList.add('active');
+        $('.sconed>.first')
+        .addClass('active')
+        .siblings()
+        .removeClass('active');
     }
+    num=$('.sconed>.sclunbo.active').attr('data-num');
+    $(`.circle>ul>li[data-sb=${num}]`)
+    .css('opacity','1')
+    .siblings()
+    .css('opacity','0.2');
 },3000);
 /************************左右箭头和指示器************************************************* */
-var left=document.querySelector('a.left');
-left.onclick=function(){
-    var act=document.querySelector('.sconed>.sclunbo.active');
-    var num=act.dataset.num;
-    var actli=document.querySelector(`.circle>ul>li:nth-child(${num})`);
-    actli.style.opacity='0.2';
+$('a.left').click(function(){
+    var num=$('.sconed>.sclunbo.active').attr('data-num');
     if(num>1){
-        act.classList.remove('active');
-        act.previousElementSibling.classList.add('active');
-        actli.previousElementSibling.style.opacity='1';
+        $('.sconed>.sclunbo.active')
+        .prev().addClass('active')
+        .siblings()
+        .removeClass('active');
     }else{
-        act.classList.remove('active');
-        var lastli=document.querySelector(`.circle>ul>li:nth-child(5)`);
-        lastli.style.opacity='1';
-        var last=document.querySelector('.sconed>.last');
-        last.classList.add('active');
+        $('.sconed>.last')
+        .addClass('active')
+        .siblings()
+        .removeClass('active');
     }
-};
-var right=document.querySelector('a.right');
-right.onclick=function(){
-    var act=document.querySelector('.sconed>.sclunbo.active');
-    var num=act.dataset.num;
-    var actli=document.querySelector(`.circle>ul>li:nth-child(${num})`);
-    actli.style.opacity='0.2';
+    num=$('.sconed>.sclunbo.active').attr('data-num');
+    $(`.circle>ul>li[data-sb=${num}]`)
+    .css('opacity','1')
+    .siblings()
+    .css('opacity','0.2');
+});
+$('a.right').click(function(){
+    var num=$('.sconed>.sclunbo.active').attr('data-num');
     if(num<5){
-        act.classList.remove('active');
-        act.nextElementSibling.classList.add('active');
-        actli.nextElementSibling.style.opacity='1';
+        $('.sconed>.sclunbo.active')
+        .next().addClass('active')
+        .siblings()
+        .removeClass('active');
     }else{
-        act.classList.remove('active');
-        var firstli=document.querySelector(`.circle>ul>li:nth-child(1)`);
-        firstli.style.opacity='1';
-        var first=act.parentElement.firstElementChild;
-        first.classList.add('active');
+        $('.sconed>.first')
+        .addClass('active')
+        .siblings()
+        .removeClass('active');
     }
-};
-/*********************************更换内容**************************************** */
-    var lis=document.querySelectorAll('.xiala>ul>li');
-    for(var li of lis){
-        li.onclick=function(){
-            var xiala=this.parentElement.parentElement;
-            var act=xiala.getElementsByTagName('span')[0];
-            var content=this.innerHTML;
-            act.innerHTML=content;
+    num=$('.sconed>.sclunbo.active').attr('data-num');
+    $(`.circle>ul>li[data-sb=${num}]`)
+    .css('opacity','1')
+    .siblings()
+    .css('opacity','0.2');
+});
+/*********************************nav更换内容**************************************** */
+$('.xiala>ul>li').click(function(){
+           $(this)
+           .parent()
+           .parent()
+           .find('span')
+           .html($(this).html());
         }
-    }
+)

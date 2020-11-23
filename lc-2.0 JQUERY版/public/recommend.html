@@ -4,10 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/comm.css">  <!---->
     <link rel="stylesheet" href="./css/recommend.css">
-    <script src="./js/ajax.js"></script>
-    <script src="./js/comm.js"></script>
 </head>
 <body>
     <header id="header"></header>
@@ -15,7 +12,7 @@
         <!--轮播图-->
         <div class="sconed">
           <!--图-->
-          <div class="sclunbo active" data-num="1">
+          <div class="sclunbo active first" data-num="1">
             <img src="./img/bg/sc4.jpg" alt="">
           </div>
           <div  class="sclunbo" data-num="2">
@@ -36,11 +33,11 @@
             <!--指示器-->
             <div class="circle">
               <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+                <li data-sb="1"></li>
+                <li data-sb="2"></li>
+                <li data-sb="3"></li>
+                <li data-sb="4"></li>
+                <li data-sb="5"></li>
               </ul>
             </div>
         </div>
@@ -170,8 +167,8 @@
                               <ul>
                                 <li>包</li>
                                 <li>项链</li>
-                                <li>头巾</li>
-                                <li>耳钉</li>
+                                <li>皮带</li>
+                                <li>眼镜</li>
                               </ul>
                             </div>
                             <ul class="clearfix">
@@ -713,6 +710,7 @@
         </div>
       </div>
     <footer id="footer"></footer>
+    <script src="./js/jquery-1.11.3.js"></script>
     <script src="./js/recommend.js"></script>
     <script src="./js/comm.js"></script>
 </body>
