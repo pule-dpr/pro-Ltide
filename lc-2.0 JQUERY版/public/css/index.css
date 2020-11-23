@@ -108,11 +108,27 @@
   .column-right div:last-child img:first-child{
     height: 100%;
   }
+  /*******************背景***********************/
   #contain .about-us{
     width: 100%;
+    font-family: "Exo", sans-serif;
+    color: #fff;
+    background: linear-gradient(-45deg, #ff6600, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
     height: 240px;
-    background-color: #ff6600;
     margin-top: 40px;
+  }
+  @keyframes gradientBG {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
   }
   #contain .about-us div{
     display: flex;

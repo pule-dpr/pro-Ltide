@@ -24,3 +24,8 @@ $('#top .detail .first div:last-child>a').click(function(){
  })
  /***************************ajax请求我的作品********************************** */
 })
+/**************************跳转********************************* */
+$(' #list .body .row li ul li').click(function(){
+    location.href='http://127.0.0.1:8080/detail.html?fid=1'
+});
+

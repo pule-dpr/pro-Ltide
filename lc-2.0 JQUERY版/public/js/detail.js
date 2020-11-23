@@ -31,13 +31,7 @@ $.ajax({
         $('#siliao').css('display','none');
     })
     })
-    /*************分享********************** */
-    var fx=function(){
-    $('#fx').css('display','block');
-    $('#fx .close').click(function(){
-        $('#fx').css('display','none');
-    })
-    }
+    /*****************分享框************** */
     $('.fixnav>li:nth-child(3)').click(fx);
     $('.btns>button:last-child').click(fx);
     /*************固定栏的喜欢收藏交互********************** */

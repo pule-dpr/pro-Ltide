@@ -92,7 +92,7 @@ $.ajax({
         }
     )
 });
- 
+  
 /*************图片轮播********************* */
 $(window).load(function(){
   var count=0;
@@ -106,4 +106,6 @@ $(window).load(function(){
           count=0;
       }
   },2000);
+  /*************分享******************* */
+  $(' #list .body .row li ul li .textcontent div:last-child>a:last-child').click(fx).attr('href','javascript:;');
 })

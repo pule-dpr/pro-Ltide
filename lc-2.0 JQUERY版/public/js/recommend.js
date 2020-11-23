@@ -61,5 +61,8 @@ $('.xiala>ul>li').click(function(){
            .parent()
            .find('span')
            .html($(this).html());
-        }
+        }   
 )
+/*************分享******************* */
+$(' #list .body .row li ul li .textcontent div:last-child>a:last-child').click(fx).attr('href','javascript:;');
+ 
