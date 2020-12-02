@@ -3,26 +3,26 @@
         <!--登录和注册-->
         <div class="loginmain">
             <ul class="loginheader clearfix">
-                <li class="check" data-btn="tab" data-divid="logincontent" @click="chose" :class="{check:check}">登录</li>
-                <li data-btn="tab" data-divid="registercontent" @click="chose">注册</li>
+                <li data-btn="tab" data-divid="logincontent" @click="chose(log)" :class="{check:log}">登录</li>
+                <li data-btn="tab" data-divid="registercontent" @click="chose(reg)" :class="{check:reg}">注册</li>
             </ul>
             <!--登录-->
-            <div class="logincontent" id="logincontent" v-if="check">
+            <div class="logincontent" id="logincontent" v-if="log==true">
                 <div class="loginput">
                     <label for="uname">用户名：</label> 
                     <div>
-                        <input type="text" placeholder="请输入用户名或手机号" id="uname">
+                        <input type="text" placeholder="请输入用户名或手机号" id="uname" v-model="uname">
                     </div>
                     <label for="upwd" class="pw">密码：</label> 
                     <div>
-                        <input type="password" placeholder="请输入密码" id="upwd">
+                        <input type="password" placeholder="请输入密码" id="upwd" v-model="upwd">
                     </div>
                 </div>
                 <div class="fgupwd">
                     <a href="">忘记密码 ？</a>
                 </div>
                <div class="loginbtn">
-                    <button>登录</button>
+                    <button @click="login">登录</button>
                </div>
             </div>
               <!--注册-->
@@ -31,27 +31,27 @@
                     <div class="registerput">
                         <label for="uname">用户名：</label> 
                         <div>
-                            <input type="text" placeholder="请输入用户名" id="setuname">
+                            <input type="text" placeholder="          请输入用户名" id="setuname">
                         </div>
                         <label for="upwd" class="ml">设置密码：</label> 
                         <div>
-                            <input type="text" placeholder="请输入6~12位密码" id="setupwd">
+                            <input type="text" placeholder="          请输入6~12位密码" id="setupwd">
                         </div>
                         <label for="upwdagain" class="ml">确认密码：</label> 
                         <div>
-                            <input type="text" placeholder="请再次输入密码" id="againupwd">
+                            <input type="text" placeholder="          请再次输入密码" id="againupwd">
                         </div>
                         <label for="upwd">手机号：</label> 
                         <div>
-                            <input type="text" placeholder="请输入手机号" id="phone">
+                            <input type="text" placeholder="          请输入手机号" id="phone">
                         </div>
                     </div>
                     <div class="registerbtn">
                         <button>注册</button>
                    </div>
                    <div class="yes">
-                       <input type="checkbox" checked>
-                       <span></span>
+                       <input type="checkbox" :checked="isAgree">
+                       <span @click="Agree"></span>
                        <span>我已阅读并同意L tide隐私权声明</span>
                    </div>
                 </div>
@@ -187,13 +187,45 @@
 export default {
     data(){
         return{
-            check:true,
+            log:true,
+            reg:false,
+            isAgree:false,
+            uname:"",
+            upwd:"",
+            user:{},
         }
     },
     methods:{
-        chose(){
-           this.check= this.check==true?false:true;
+        chose(n){
+            if(n==true){
+
+            }else{
+                 if(this.log==true){
+               this.log=false;
+               this.reg=true;
+           }else{
+               this.log=true;
+               this.reg=false;
+           }
+            }
+        },
+        Agree(){
+            this.isAgree=this.isAgree==true?false:true;
+        },
+        login(){
+            this.axios.get(`/user/v1/login/${this.uname}&${this.upwd}`).then(result=>{
+                if(result.data.length>0){
+                    alert("登录成功");
+                    [this.user]=result.data;
+                    console.log(this.user);
+                }else{
+                    alert("用户名或密码错误");
+                }
+            });
         }
     },
+    mounted(){
+       
+    }
 }
 </script>
