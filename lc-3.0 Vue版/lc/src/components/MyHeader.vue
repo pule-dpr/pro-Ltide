@@ -6,24 +6,24 @@
             <a href="javascript:;" class="logofl">
                 <img src="/img/logo/L潮logo6.png" alt="" class="logo">
             </a>
-            <div class="notlogin rf" v-if="islogin">
+            <div class="notlogin rf" v-if="this.$store.state.islogin==0">
                 <ul class="loginnav clearfix">
                     <li>|</li>
-                    <li><a href="#">注册</a></li>
+                    <li><router-link to="">注册</router-link></li>
                     <li>|</li>
-                    <li><a href="./login.html">登录</a></li>
+                    <li><router-link to="/login">登录</router-link></li>
                 </ul>
             </div>
             <div class="login rf" v-else>
               <ul class="loginnav clearfix yes">
                   <li>
-                    <img src="/img/detail/tx4.jpg" alt="">
+                    <img :src="this.$store.state.info.avatar" alt="">
                   </li>
-                  <li><a href="personal.html">个人中心</a></li>
+                  <li><router-link to="">个人中心</router-link></li>
                   <li>|</li>
-                  <li><a href="#">注销</a></li>
+                  <li @click="logout"><router-link  to="">注销</router-link></li>
                   <li>|</li>
-                  <li><a href="#">我的消息<span class="iconfont icontixing"></span></a></li>
+                  <li><router-link to="">我的消息<span class="iconfont icontixing"></span></router-link></li>
               </ul>
           </div>
         </nav>
@@ -327,12 +327,13 @@
     margin-top: 50px;
     margin-right: 50px;
     margin-bottom: 0px;
+    padding-top: 15px;
 }
  .header .loginnav.yes>li:first-child{
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    margin-top: -10px;
+    margin-top: -15px;
     overflow: hidden;
 }
 .header .loginnav.yes>li:first-child>img{
@@ -485,9 +486,9 @@
 </style>
 <script>
 export default {
-  data(){
-    return{
-      islogin:true,
+  methods:{
+    logout(){
+      this.$store.commit("logoutMutations");
     }
   },
 }

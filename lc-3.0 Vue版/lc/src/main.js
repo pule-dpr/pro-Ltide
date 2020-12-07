@@ -4,6 +4,7 @@ import router from './router'
 import store from './store'
 //引入axios
 import axios from 'axios'
+import qs from 'qs'
 //引入页头页脚
 import MyHeader from './components/MyHeader'
 import MyFooter from './components/MyFooter'
@@ -16,6 +17,7 @@ Vue.config.productionTip = false
 axios.defaults.baseURL="http://127.0.0.1:3000"
 //添加到原型对象
 Vue.prototype.axios=axios;
+Vue.prototype.qs=qs;
 new Vue({
   router,
   store,

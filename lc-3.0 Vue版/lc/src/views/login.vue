@@ -184,6 +184,7 @@
 /*******************************************************************************/
 </style>
 <script>
+import {getLogin} from '../../public/js/apis/user.js'
 export default {
     data(){
         return{
@@ -192,13 +193,11 @@ export default {
             isAgree:false,
             uname:"",
             upwd:"",
-            user:{},
         }
     },
     methods:{
         chose(n){
             if(n==true){
-
             }else{
                  if(this.log==true){
                this.log=false;
@@ -213,11 +212,13 @@ export default {
             this.isAgree=this.isAgree==true?false:true;
         },
         login(){
-            this.axios.get(`/user/v1/login/${this.uname}&${this.upwd}`).then(result=>{
-                if(result.data.length>0){
+            getLogin(this.uname,this.upwd).then(result=>{
+                if(result.length>0){
                     alert("登录成功");
-                    [this.user]=result.data;
-                    console.log(this.user);
+                    //提交mutations，以改变用户登录状态
+                    this.$store.commit('loginMutations',result[0]);
+                    console.log(this.$store.state.info);
+                    this.$router.push("/");
                 }else{
                     alert("用户名或密码错误");
                 }
