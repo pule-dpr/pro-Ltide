@@ -6,10 +6,10 @@
             <a href="javascript:;" class="logofl">
                 <img src="/img/logo/L潮logo6.png" alt="" class="logo">
             </a>
-            <div class="notlogin rf" v-if="this.$store.state.islogin==0">
+            <div class="notlogin rf" v-if="islogin==0">
                 <ul class="loginnav clearfix">
                     <li>|</li>
-                    <li><router-link to="">注册</router-link></li>
+                    <li><router-link to="/login">注册</router-link></li>
                     <li>|</li>
                     <li><router-link to="/login">登录</router-link></li>
                 </ul>
@@ -17,7 +17,7 @@
             <div class="login rf" v-else>
               <ul class="loginnav clearfix yes">
                   <li>
-                    <img :src="this.$store.state.info.avatar" alt="">
+                    <img :src="info.avatar" alt="">
                   </li>
                   <li><router-link to="">个人中心</router-link></li>
                   <li>|</li>
@@ -485,10 +485,23 @@
 }
 </style>
 <script>
+import {mapState,mapMutations} from 'vuex'
 export default {
+  computed:{
+    //数组方式不能改名
+    ...mapState(['islogin','info']),
+    //对象方式可以改名
+    // ...mapState({
+    //   ag1:"age",
+    //   sex1:"ssex"
+    //   }),
+  },
   methods:{
+    //将$store中的mutations中方法导入为自己的methods
+    ...mapMutations(["logoutMutations"]),
     logout(){
-      this.$store.commit("logoutMutations");
+      this.logoutMutations();
+      localStorage.clear();
     }
   },
 }

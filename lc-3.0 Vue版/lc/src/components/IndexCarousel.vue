@@ -25,6 +25,7 @@
     }
 </style>
 <script>
+
 export default {
     
 }

@@ -31,23 +31,23 @@
                     <div class="registerput">
                         <label for="uname">用户名：</label> 
                         <div>
-                            <input type="text" placeholder="          请输入用户名" id="setuname">
+                            <input v-model="uname" type="text" placeholder="          请输入用户名" id="setuname">
                         </div>
                         <label for="upwd" class="ml">设置密码：</label> 
                         <div>
-                            <input type="text" placeholder="          请输入6~12位密码" id="setupwd">
+                            <input v-model="upwd" type="text" placeholder="          请输入6~12位密码" id="setupwd">
                         </div>
                         <label for="upwdagain" class="ml">确认密码：</label> 
                         <div>
-                            <input type="text" placeholder="          请再次输入密码" id="againupwd">
+                            <input v-model="aginupwd" type="text" placeholder="          请再次输入密码" id="againupwd">
                         </div>
                         <label for="upwd">手机号：</label> 
                         <div>
-                            <input type="text" placeholder="          请输入手机号" id="phone">
+                            <input v-model="phone" type="text" placeholder="          请输入手机号" id="phone">
                         </div>
                     </div>
                     <div class="registerbtn">
-                        <button>注册</button>
+                        <button @click="register"  :disabled="!isAgree">注册</button>
                    </div>
                    <div class="yes">
                        <input type="checkbox" :checked="isAgree">
@@ -184,7 +184,7 @@
 /*******************************************************************************/
 </style>
 <script>
-import {getLogin} from '../../public/js/apis/user.js'
+import {getLogin,getreg} from '../../public/js/apis/user.js'
 export default {
     data(){
         return{
@@ -193,6 +193,8 @@ export default {
             isAgree:false,
             uname:"",
             upwd:"",
+            aginupwd:"",
+            phone:"",
         }
     },
     methods:{
@@ -217,12 +219,35 @@ export default {
                     alert("登录成功");
                     //提交mutations，以改变用户登录状态
                     this.$store.commit('loginMutations',result[0]);
-                    console.log(this.$store.state.info);
+                    //将用户信息和登录状态再存一份到webstoreage
+                    localStorage.setItem("islogin",1);
+                    localStorage.setItem("info",JSON.stringify(result[0]));
                     this.$router.push("/");
                 }else{
                     alert("用户名或密码错误");
                 }
             });
+        },
+        register(){
+            //确认密码是否正确正确
+            var reg=new RegExp("^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,12}$","ig"); 
+            var zq=reg.test(this.upwd);
+             console.log(zq);
+            //两次密码是否一致
+            var agin=this.upwd==this.aginupwd;
+            if(zq!=true){
+                alert("密码格式不正确");
+                return
+            }else if(agin!=true){
+                alert("两次密码不一致");
+                return
+            }
+           getreg(this.uname,this.upwd,this.aginupwd,this.phone).then(result=>{
+               if(result>0){
+                   alert("注册成功");
+                   this.chose(this.log);
+               }
+           });
         }
     },
     mounted(){

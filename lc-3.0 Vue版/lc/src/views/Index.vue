@@ -58,286 +58,88 @@
                     <li>
                       <div>潮鞋/shoes</div>
                       <ul class="clearfix" id="shoese">
-                        <!-- <li>
+                        <li v-for="(p,i) in p1" :key="i">
                           <div class="img">
-                            <img src="./img/list/1.jpg" alt="">
+                            <img :src="p.pic" alt="">
                           </div>
                           <div class="textcontent">
                             <div>
-                              标题：nike blazer mid 灰黑白 迷彩
+                              标题：{{p.title}}
                             </div>
                             <div>
-                              浏览次数：<span class=" iconfont iconliulan">18676</span>
+                              浏览次数：<span class=" iconfont iconliulan">{{p.look_count}}</span>
                             </div>
                             <div>
-                              发布人：<a href="">无人区玫瑰</a> 
+                              发布人：<a href="">{{p.author_name}}</a> 
                             </div>
                            <div>
-                             <a href="detail.html">查看详情</a>
-                             <a href=""  class=" iconfont iconxihuan"></a>
-                             <a href="" class=" iconfont iconxingji"></a>
-                             <a href="" class=" iconfont iconfenxiang"></a>
+                             <router-link to="">查看详情</router-link>
+                             <router-link to=""  class=" iconfont iconxihuan"></router-link>
+                             <router-link to="" class=" iconfont iconxingji"></router-link>
+                             <router-link to="" class=" iconfont iconfenxiang"></router-link>
                            </div>
                           </div>
-                        </li>
-                        <li>
-                          <div class="img">
-                            <img src="./img/list/2.jpg" alt="">
-                          </div>
-                          <div class="textcontent">
-                            <div>
-                              标题：Adidas 三叶草 新款 高帮
-                            </div>
-                            <div>
-                              浏览次数：<span class=" iconfont iconliulan">10584</span>
-                            </div>
-                            <div>
-                              发布人：<a href="">pick 赵小棠</a> 
-                            </div>
-                           <div>
-                             <a href="">查看详情</a>
-                             <a href=""  class=" iconfont iconxihuan"></a>
-                             <a href="" class=" iconfont iconxingji"></a>
-                             <a href="" class=" iconfont iconfenxiang"></a>
-                           </div>
-                          </div>
-                        </li> 
-                        <li>
-                          <div class="img">
-                            <img src="./img/list/3.jpg" alt="">
-                          </div>
-                          <div class="textcontent">
-                            <div>
-                              标题：nike air max 97 x undftd联名
-                            </div>
-                            <div>
-                              浏览次数：<span class=" iconfont iconliulan">25647</span>
-                            </div>
-                            <div>
-                              发布人：<a href="">橘黄色的柠檬</a> 
-                            </div>
-                           <div>
-                             <a href="">查看详情</a>
-                             <a href=""  class=" iconfont iconxihuan"></a>
-                             <a href="" class=" iconfont iconxingji"></a>
-                             <a href="" class=" iconfont iconfenxiang"></a>
-                           </div>
-                          </div>
-                        </li> 
-                        <li>
-                          <div class="img">
-                            <img src="./img/list/4.jpg" alt="">
-                          </div>
-                          <div class="textcontent">
-                            <div>
-                              标题：万斯 新款 吴亦凡同款 板鞋
-                            </div>
-                            <div>
-                              浏览次数：<span class=" iconfont iconliulan">26984</span>
-                            </div>
-                            <div>
-                              发布人：<a href="">含了巧克力</a> 
-                            </div>
-                           <div>
-                             <a href="">查看详情</a>
-                             <a href=""  class=" iconfont iconxihuan"></a>
-                             <a href="" class=" iconfont iconxingji"></a>
-                             <a href="" class=" iconfont iconfenxiang"></a>
-                           </div>
-                          </div>
-                        </li> -->
+                        </li>                        
                       </ul>
                     </li>
                     <li>
                       <div>配饰/ACC</div>
                       <ul class="clearfix" id="accs">
-                        <!-- <li>
+                          <li v-for="(p,i) in p2" :key="i">
                           <div class="img">
-                            <img src="./img/list/acc1.jpg" alt="">
+                            <img :src="p.pic" alt="">
                           </div>
                           <div class="textcontent">
                             <div>
-                              标题：耳机项链 复古 潮流 配饰
+                              标题：{{p.title}}
                             </div>
                             <div>
-                              浏览次数：<span class=" iconfont iconliulan">26556</span>
+                              浏览次数：<span class=" iconfont iconliulan">{{p.look_count}}</span>
                             </div>
                             <div>
-                              发布人：<a href="">capper</a> 
+                              发布人：<a href="">{{p.author_name}}</a> 
                             </div>
                            <div>
-                             <a href="">查看详情</a>
-                             <a href=""  class=" iconfont iconxihuan"></a>
-                             <a href="" class=" iconfont iconxingji"></a>
-                             <a href="" class=" iconfont iconfenxiang"></a>
+                             <router-link to="">查看详情</router-link>
+                             <router-link to=""  class=" iconfont iconxihuan"></router-link>
+                             <router-link to="" class=" iconfont iconxingji"></router-link>
+                             <router-link to="" class=" iconfont iconfenxiang"></router-link>
                            </div>
                           </div>
-                        </li>
-                        <li>
-                          <div class="img">
-                            <img src="./img/list/acc2.jpg" alt="">
-                          </div>
-                          <div class="textcontent">
-                            <div>
-                              标题：海尔兄弟 工艺品吊坠 潮流
-                            </div>
-                            <div>
-                              浏览次数：<span class=" iconfont iconliulan">16859</span>
-                            </div>
-                            <div>
-                              发布人：<a href="">快竖起耳朵</a> 
-                            </div>
-                           <div>
-                             <a href="">查看详情</a>
-                             <a href=""  class=" iconfont iconxihuan"></a>
-                             <a href="" class=" iconfont iconxingji"></a>
-                             <a href="" class=" iconfont iconfenxiang"></a>
-                           </div>
-                          </div>
-                        </li> 
-                        <li>
-                          <div class="img">
-                            <img src="./img/list/acc3.jpg" alt="">
-                          </div>
-                          <div class="textcontent">
-                            <div>
-                              标题：hip-hop 潮流嘻哈 饰品
-                            </div>
-                            <div>
-                              浏览次数：<span class=" iconfont iconliulan">17658</span>
-                            </div>
-                            <div>
-                              发布人：<a href="">加拿大的花</a> 
-                            </div>
-                           <div>
-                             <a href="">查看详情</a>
-                             <a href=""  class=" iconfont iconxihuan"></a>
-                             <a href="" class=" iconfont iconxingji"></a>
-                             <a href="" class=" iconfont iconfenxiang"></a>
-                           </div>
-                          </div>
-                        </li> 
-                        <li>
-                          <div class="img">
-                            <img src="./img/list/acc4.jpg" alt="">
-                          </div>
-                          <div class="textcontent">
-                            <div>
-                              标题：卡洛奇饰品 街头潮人锁骨链
-                            </div>
-                            <div>
-                              浏览次数：<span class=" iconfont iconliulan">19856</span>
-                            </div>
-                            <div>
-                              发布人：<a href="">别靠近我这里</a> 
-                            </div>
-                           <div>
-                             <a href="">查看详情</a>
-                             <a href=""  class=" iconfont iconxihuan"></a>
-                             <a href="" class=" iconfont iconxingji"></a>
-                             <a href="" class=" iconfont iconfenxiang"></a>
-                           </div>
-                          </div>
-                        </li> -->
+                        </li>                   
                       </ul>
                     </li>
                     <li>
                       <div>潮帽/Caps</div>
                       <ul class="clearfix" id="caps">
-                        <!-- <li>
+                          <li v-for="(p,i) in p3" :key="i">
                           <div class="img">
-                            <img src="./img/list/cap1.jpg" alt="">
+                            <img :src="p.pic" alt="">
                           </div>
                           <div class="textcontent">
                             <div>
-                              标题：GD同款 鸭舌帽 潮流
+                              标题：{{p.title}}
                             </div>
                             <div>
-                              浏览次数：<span class=" iconfont iconliulan">21589</span>
+                              浏览次数：<span class=" iconfont iconliulan">{{p.look_count}}</span>
                             </div>
                             <div>
-                              发布人：<a href="">芜湖大司马</a> 
+                              发布人：<a href="">{{p.author_name}}</a> 
                             </div>
                            <div>
-                             <a href="">查看详情</a>
-                             <a href=""  class=" iconfont iconxihuan"></a>
-                             <a href="" class=" iconfont iconxingji"></a>
-                             <a href="" class=" iconfont iconfenxiang"></a>
+                             <router-link to="">查看详情</router-link>
+                             <router-link to=""  class=" iconfont iconxihuan"></router-link>
+                             <router-link to="" class=" iconfont iconxingji"></router-link>
+                             <router-link to="" class=" iconfont iconfenxiang"></router-link>
                            </div>
                           </div>
-                        </li>
-                        <li>
-                          <div class="img">
-                            <img src="./img/list/cap2.jpg" alt="">
-                          </div>
-                          <div class="textcontent">
-                            <div>
-                              标题：渔夫帽 吴亦凡同款 潮流
-                            </div>
-                            <div>
-                              浏览次数：<span class=" iconfont iconliulan">18659</span>
-                            </div>
-                            <div>
-                              发布人：<a href="">vava</a> 
-                            </div>
-                           <div>
-                             <a href="">查看详情</a>
-                             <a href=""  class=" iconfont iconxihuan"></a>
-                             <a href="" class=" iconfont iconxingji"></a>
-                             <a href="" class=" iconfont iconfenxiang"></a>
-                           </div>
-                          </div>
-                        </li> 
-                        <li>
-                          <div class="img">
-                            <img src="./img/list/cap3.jpg" alt="">
-                          </div>
-                          <div class="textcontent">
-                            <div>
-                              标题：针织帽 GD同款 新款
-                            </div>
-                            <div>
-                              浏览次数：<span class=" iconfont iconliulan">17658</span>
-                            </div>
-                            <div>
-                              发布人：<a href="">贝贝</a> 
-                            </div>
-                           <div>
-                             <a href="">查看详情</a>
-                             <a href=""  class=" iconfont iconxihuan"></a>
-                             <a href="" class=" iconfont iconxingji"></a>
-                             <a href="" class=" iconfont iconfenxiang"></a>
-                           </div>
-                          </div>
-                        </li> 
-                        <li>
-                          <div class="img">
-                            <img src="./img/list/cap4.jpg" alt="">
-                          </div>
-                          <div class="textcontent">
-                            <div>
-                              标题：陈冠希代言 男帽 新款
-                            </div>
-                            <div>
-                              浏览次数：<span class=" iconfont iconliulan">24856</span>
-                            </div>
-                            <div>
-                              发布人：<a href="">冠希哥好帅</a> 
-                            </div>
-                           <div>
-                             <a href="">查看详情</a>
-                             <a href=""  class=" iconfont iconxihuan"></a>
-                             <a href="" class=" iconfont iconxingji"></a>
-                             <a href="" class=" iconfont iconfenxiang"></a>
-                           </div>
-                          </div>
-                        </li> -->
+                        </li>                   
                       </ul>
                     </li>
                   </ul>
                 </div>
                 <div class="foot">
-                  <a href="" class="dou">更多作品 >></a>
+                  <router-link to="/list" class="dou">更多作品 >></router-link>
                 </div>
             </div>
             <!--结尾ending-->
@@ -491,7 +293,7 @@
       background-position: 0% 50%;
     }
   }
-  #indexn .about-us div{
+  #index .about-us div{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -500,7 +302,7 @@
     position: relative;
     top: -50px;
   }
-  #index .about-us div>a{
+  #index  .about-us div>a{
     width: 135px;
     height: 35px;
     border: 1px solid #663399;
@@ -648,11 +450,26 @@
     }
 </style>
 <script>
+import Carousel from '../components/IndexCarousel'
+import {getpro} from '../../public/js/apis/indexproduct.js'
 export default {
+  component:{
+    Carousel
+  },
     data(){
         return{
-            
+          p1:[],
+          p2:[],
+          p3:[]
         }
+    },
+    mounted(){
+      getpro().then(result=>{
+        this.p1=result.slice(0,4);
+        this.p2=result.slice(4,8);
+        this.p3=result.slice(8,12);
+      }
+      );
     }
 }
 </script>

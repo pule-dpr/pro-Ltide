@@ -17,4 +17,18 @@ function getLogin(uname,upwd){
         });
     })
 }
-export{getLogin}
+function getreg(uname,upwd,phone){
+    return new Promise(function(resolve,reject){
+        let obj={
+            uname:uname,
+            upwd:upwd,
+            phone:phone
+        }
+         //qs解析对象为字符串
+         let str=qs.stringify(obj); 
+         axios.post(baseURL+'/user/v1/register',str).then(result=>{
+             resolve(result.data);
+         })
+    });
+}
+export{getLogin,getreg}

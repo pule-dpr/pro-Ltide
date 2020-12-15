@@ -8,8 +8,8 @@ export default new Vuex.Store({
   //定义了应用状态的数据结构，其类型可以为string，number，bool，object
   state: {
     //标识用户是否已经登录
-    islogin:0,
-    info:{},
+    islogin:localStorage.getItem("islogin")||0,
+    info:JSON.parse(localStorage.getItem("info"))||{},
   },
   //定义方法改变状态
   mutations: {
