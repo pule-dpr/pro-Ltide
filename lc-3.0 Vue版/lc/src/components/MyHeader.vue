@@ -1,25 +1,23 @@
 <template>
   <div class="header">
         <!--nav-->
-        <nav class="clearfix">
+        <nav class="">
             <!--logo-->
-            <a href="javascript:;" class="logofl">
-                <img src="/img/logo/L潮logo6.png" alt="" class="logo">
-            </a>
-            <div class="notlogin rf" v-if="islogin==0">
+            <img src="/img/logo/L潮logo6.png" alt="" class="logo">
+            <div class="notlogin fr" v-if="islogin==0">
                 <ul class="loginnav clearfix">
                     <li>|</li>
-                    <li><router-link to="/login">注册</router-link></li>
+                    <li @click="register('reg')"><router-link to="/login">注册</router-link></li>
                     <li>|</li>
-                    <li><router-link to="/login">登录</router-link></li>
+                    <li  @click="register('log')"><router-link to="/login">登录</router-link></li>
                 </ul>
             </div>
-            <div class="login rf" v-else>
+            <div class="login" v-else>
               <ul class="loginnav clearfix yes">
                   <li>
                     <img :src="info.avatar" alt="">
                   </li>
-                  <li><router-link to="">个人中心</router-link></li>
+                  <li><router-link to="/personal">个人中心</router-link></li>
                   <li>|</li>
                   <li @click="logout"><router-link  to="">注销</router-link></li>
                   <li>|</li>
@@ -31,9 +29,9 @@
         <div class="classify">
             <div class="classcontent">
                 <ul class="navcontent clearfix">
-                    <li><a href="index.html"> 首页</a></li>
-                    <li><a href="new.html">最新发布</a></li>
-                    <li><a href="recommend.html">潮物推荐</a></li>
+                    <li><router-link to="/"> 首页</router-link></li>
+                    <li><router-link to="/">最新发布</router-link></li>
+                    <li><router-link to="/">潮物推荐</router-link></li>
                     <li>
                       <a href="#">潮牌</a>
                       <div class="nav clearfix" id="pai">
@@ -41,7 +39,7 @@
                           <h4 >分类</h4>
                           <ul class="sort">
                               <li>
-                                  <a href="">Adidas</a>
+                                  <a @click="jump('Adidas')">Adidas</a>
                                   <div class="first">
                                     <img src="/img/chaopai/1.jpg" alt="">
                                   </div>
@@ -291,41 +289,43 @@
                         </div>            
                     </div>
                     </li> 
-                    <li>
-                       <!--搜索框-->
-                      <div class="searchcontent">
-                        <input type="text" placeholder="你应该会喜欢...">
-                        <span class="iconfont iconchazhao"></span>
-                      </div>
-                    </li>
-                </ul>      
+                </ul>  
+                <!--搜索框-->
+                <div class="searchcontent">
+                    <input type="text" placeholder="你应该会喜欢...">
+                    <span class="iconfont iconchazhao"></span>
+                </div>   
             </div>
         </div>
     </div>
 </template>
 <style >
 .header nav{
-    margin-top: 30px;
+    margin-top: 20px;
     margin-bottom: 10px;
 }
 .header .logo{
-    width: 150px;
-    margin-left: 685px;
+    width: 160px;
+    height: 75px;
+    display: inline-block;
+    margin-left: 50%;
+    position: relative;
+    left: -80px;
 }
-.header .logofl{
-    float: left;
+.header .notlogin{
+  margin-right: 5%;
 }
 .header .login{
     float: right;
 }
 .header .loginnav{
-  overflow: hidden;
+    overflow: hidden;
     list-style: none;
     margin-top: 45px;
 }
 .header .loginnav.yes{
-    margin-top: 50px;
-    margin-right: 50px;
+    margin-top: 10%;
+    margin-right: 30px;
     margin-bottom: 0px;
     padding-top: 15px;
 }
@@ -360,20 +360,21 @@
     position: relative;
 }
 .header .classify .classcontent{
-    width: 1300px;
+    width: 65%;
     height: 70px;
     margin: 0 auto;
+    position: relative;
 }
 .header .classcontent .navcontent{
     list-style: none;
     position: relative;
-    margin-left:40px;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
 }
-.header .classcontent .navcontent li{
-    float: left;
-    width: 110px;
+.header .classcontent .navcontent>li{
+    width: 115px;
     height: 70px;
-    
     box-sizing: border-box;
 }
 .header .classcontent .navcontent li>a{
@@ -389,16 +390,14 @@
 .header .classcontent .navcontent>li:not(:first-child):hover{
     border-bottom:3px solid #000;
 }
-.header .classcontent .navcontent>li:last-child:hover{
-    border: none;
-}
 .header .classcontent .navcontent>li:hover .nav{
     display: block;
     z-index: 999;
 }
  .header .classify .searchcontent{
-    margin-top:25px;
-   margin-left: 50px;
+   top: 20px;
+   left: 100%;
+   margin-left:30px;
    position: absolute;
 }
 .header .classify .searchcontent input{
@@ -413,7 +412,7 @@
     width: 160px;
 }
 .header .classify .searchcontent input:focus{
-    box-shadow: 0px 0px 2px 1px #663399;
+    box-shadow: 0px 0px 2px 2px #ccc;
 }
  .header .iconchazhao{
     color: #000;
@@ -421,25 +420,21 @@
     margin-left: -30px;
    
 }
-.header .classify::after{
-    content: '';
-    display: block;
-    clear: both;
-}
 /*********************************************************************************************/
 .header .nav{
     display: none;
     position: absolute;
     top: 73px;
-    left: 150px;
-    width: 900px;
-    height: 300px;
+    left: 50%;
+    margin-left: -45%;
+    width: 90%;
+    height: 350px;
     background-color:rgba(255, 255, 255,.9);
     border-bottom: 2px solid #000;
 }
 .header .nav>.textcontent{
     width: 350px;
-    margin-top: 35px;
+    margin-top: 50px;
     margin-left: 60px;
 }
 .header .textcontent h4{
@@ -460,7 +455,7 @@
     position: absolute;
     background-color: tomato;
     top: 40px;
-    left: 600px;
+    left: 65%;
     width: 225px;
     height: 225px;
     overflow: hidden;
@@ -477,8 +472,6 @@
     width: 225px;
     height: 225px;
     overflow: hidden;
-    margin-top:40px;
-    margin-right: 70px;
 }
 .header .imgs img{
     width: 100%;
@@ -486,6 +479,7 @@
 </style>
 <script>
 import {mapState,mapMutations} from 'vuex'
+import Utils from '../../public/js/util'
 export default {
   computed:{
     //数组方式不能改名
@@ -496,12 +490,23 @@ export default {
     //   sex1:"ssex"
     //   }),
   },
+  data(){
+    return{
+
+    }
+  },
   methods:{
+    register(msg){
+      Utils.$emit('demo',msg);
+    },
     //将$store中的mutations中方法导入为自己的methods
     ...mapMutations(["logoutMutations"]),
     logout(){
       this.logoutMutations();
       localStorage.clear();
+    },
+    jump(n){
+      this.$router.push(`/list/${n}`);
     }
   },
 }

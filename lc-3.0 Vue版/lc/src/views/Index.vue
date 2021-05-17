@@ -1,12 +1,8 @@
 <template>
    <div id="index">
-        <div id="share"></div>
             <!--轮播图-->
             <div class="lunbo">
-              <div class="active"><img src="/img/banner1.png" alt=""> </div>
-              <div><img src="/img/banner2.jpg" alt=""> </div>
-              <div><img src="/img/banner3.jpg" alt=""> </div>
-              <div><img src="/img/banner4.jpg" alt=""></div>
+            <my-carousel></my-carousel>
             </div>
              <!--show九宫格-->
              <div class="container">
@@ -73,9 +69,9 @@
                               发布人：<a href="">{{p.author_name}}</a> 
                             </div>
                            <div>
-                             <router-link to="">查看详情</router-link>
-                             <router-link to=""  class=" iconfont iconxihuan"></router-link>
-                             <router-link to="" class=" iconfont iconxingji"></router-link>
+                              <router-link :to="{path:'/detail',query:{id:p.pid}}">查看详情</router-link>
+                              <div class="tb xh" :class="proxh[p.pid-1]['btnxh'+p.pid]" @click="xh('btnxh'+p.pid)"></div>
+                              <div class="tb sc" :class="prosc[p.pid-1]['btnsc'+p.pid]" @click="sc('btnsc'+p.pid)"></div>
                              <router-link to="" class=" iconfont iconfenxiang"></router-link>
                            </div>
                           </div>
@@ -161,7 +157,9 @@
       </div>
 </template>
 <style>
-    
+#index{
+  width: 100%;
+}   
 #index .container{
     position: relative;
     width: 100%;
@@ -169,13 +167,8 @@
   }
  #index .lunbo{
     width: 100%;
+    height: 800px;
     margin: 0 auto;
-  }
-  #index .lunbo div{
-    display: none;
-  }
- #index .lunbo .active{
-    display: block;
   }
   #index .lunbo div img{
     width: 100%;
@@ -192,6 +185,7 @@
     margin-top: -160px;
     background-color: #ff6600;
     position: absolute;
+    z-index: 999;
   }
  #index .column-left div{
     width:680px;
@@ -339,7 +333,10 @@
     margin-top: 15px;
 }
 #index #list .body .row li ul{
-   margin-left: 155px;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
 }
 #index  #list .body .row li ul li{
     width:290px;
@@ -450,26 +447,58 @@
     }
 </style>
 <script>
-import Carousel from '../components/IndexCarousel'
 import {getpro} from '../../public/js/apis/indexproduct.js'
 export default {
-  component:{
-    Carousel
-  },
+ 
     data(){
         return{
           p1:[],
           p2:[],
-          p3:[]
+          p3:[],
+          proxh:[],
+          prosc:[]
         }
+    },
+    methods:{
+      xh(n){
+        for(var i=0;i<this.proxh.length;i++){
+          if(this.proxh[i][n]==""){
+            this.proxh[i][n]="active"
+            break;
+          }else if(this.proxh[i][n]=="active"){
+            this.proxh[i][n]=""
+            break;
+          }  
+        }
+      },
+       sc(n){
+        for(var i=0;i<this.prosc.length;i++){
+          if(this.prosc[i][n]==""){
+            this.prosc[i][n]="active"
+            break;
+          }else if(this.prosc[i][n]=="active"){
+            this.prosc[i][n]=""
+            break;
+          }  
+        }
+        console.log(this.prosc)
+      },
     },
     mounted(){
       getpro().then(result=>{
         this.p1=result.slice(0,4);
         this.p2=result.slice(4,8);
         this.p3=result.slice(8,12);
+      for(var i=0;i<result.length;i++){
+        var objxh={};
+        var objsc={};
+        objxh["btnxh"+result[i].pid]="";
+        objsc["btnsc"+result[i].pid]="";
+        this.proxh.push(objxh);
+        this.prosc.push(objsc);
       }
-      );
-    }
+      console.log(this.prosc);
+      });
+    },
 }
 </script>

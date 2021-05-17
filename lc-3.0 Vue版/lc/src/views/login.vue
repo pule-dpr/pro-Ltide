@@ -3,8 +3,8 @@
         <!--登录和注册-->
         <div class="loginmain">
             <ul class="loginheader clearfix">
-                <li data-btn="tab" data-divid="logincontent" @click="chose(log)" :class="{check:log}">登录</li>
-                <li data-btn="tab" data-divid="registercontent" @click="chose(reg)" :class="{check:reg}">注册</li>
+                <li data-btn="tab" data-divid="logincontent" @click="chose('log')" :class="{check:log}">登录</li>
+                <li data-btn="tab" data-divid="registercontent" @click="chose('reg')" :class="{check:reg}">注册</li>
             </ul>
             <!--登录-->
             <div class="logincontent" id="logincontent" v-if="log==true">
@@ -35,11 +35,11 @@
                         </div>
                         <label for="upwd" class="ml">设置密码：</label> 
                         <div>
-                            <input v-model="upwd" type="text" placeholder="          请输入6~12位密码" id="setupwd">
+                            <input v-model="upwd" type="password" placeholder="          请输入6~12位密码" id="setupwd">
                         </div>
                         <label for="upwdagain" class="ml">确认密码：</label> 
                         <div>
-                            <input v-model="aginupwd" type="text" placeholder="          请再次输入密码" id="againupwd">
+                            <input v-model="aginupwd" type="password" placeholder="          请再次输入密码" id="againupwd">
                         </div>
                         <label for="upwd">手机号：</label> 
                         <div>
@@ -87,8 +87,10 @@
 .login .loginmain .loginheader{
     width: 200px;
     list-style: none;
-    margin-left: 676px;
-    padding-top: 50px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
 }
 /*登录注册主体*/
 .login .logincontent,.login .registermain{
@@ -114,7 +116,7 @@
     background-color:transparent;
     font-size: 12px;
     font-weight: bold;
-    padding-left: 15px;
+    padding-left: 30px;
     color: #000;
 }
 .login .registercontent .registerput .ml{
@@ -139,7 +141,7 @@
 /*登录注册按钮*/
 .login .loginbtn button,.login .registerbtn button{
     display: block;
-    margin: 30px 0 20px 60px;
+    margin: 0 auto;
     outline: none;
     border: none;
     width: 160px;
@@ -185,6 +187,7 @@
 </style>
 <script>
 import {getLogin,getreg} from '../../public/js/apis/user.js'
+import Utils from '../../public/js/util'
 export default {
     data(){
         return{
@@ -199,24 +202,21 @@ export default {
     },
     methods:{
         chose(n){
-            if(n==true){
+            if(n=="log"){
+                this.log=true;
+                this.reg=false;
             }else{
-                 if(this.log==true){
-               this.log=false;
-               this.reg=true;
-           }else{
-               this.log=true;
-               this.reg=false;
-           }
-            }
+                this.log=false;
+                this.reg=true;
+                }
         },
         Agree(){
             this.isAgree=this.isAgree==true?false:true;
         },
         login(){
-            getLogin(this.uname,this.upwd).then(result=>{
+            getLogin(this.uname,this.upwd).then(result=>{ 
+                console.log(result);
                 if(result.length>0){
-                    alert("登录成功");
                     //提交mutations，以改变用户登录状态
                     this.$store.commit('loginMutations',result[0]);
                     //将用户信息和登录状态再存一份到webstoreage
@@ -251,7 +251,10 @@ export default {
         }
     },
     mounted(){
-       
+       Utils.$on('demo',(msg)=>{
+           this.$router.push("/login");
+           this.chose(msg);
+       })
     }
 }
 </script>

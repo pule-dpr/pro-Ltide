@@ -4,9 +4,35 @@ import VueRouter from 'vue-router'
 import Index from '../views/Index'
 //导入页面组件 登录页
 import Login from '../views/login'
+//导入页面组件 个人中心页
+import Personal from '../views/personal'
+//导入详情页面组件
+import Details from  '../views/details'
+import test from  '../views/test'
+import list from '../views/list'
 Vue.use(VueRouter)
 
 const routes = [
+  {
+    path: '/list',
+    name: 'list',
+    component: list
+  },
+  {
+    path: '/test',
+    name: 'test',
+    component: test
+  },
+  {
+    path: '/detail',
+    name: 'Details',
+    component: Details
+  },
+  {
+    path: '/personal',
+    name: 'Personal',
+    component: Personal
+  },
   {
     path: '/login',
     name: 'Login',
