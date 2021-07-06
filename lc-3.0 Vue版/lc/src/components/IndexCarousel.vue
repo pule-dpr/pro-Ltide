@@ -15,7 +15,8 @@
 <script>
 // 引入插件
 import { swiper, swiperSlide } from "vue-awesome-swiper";
-import 'swiper/swiper-bundle.css'
+import "swiper/dist/css/swiper.css";
+
 export default {
   components: {
     swiper,
