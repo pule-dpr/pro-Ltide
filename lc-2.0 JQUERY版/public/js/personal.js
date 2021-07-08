@@ -1,6 +1,7 @@
 $(function(){
     /**********详细资料下拉实现**************** */
 $('#top .detail .first div:last-child>a').click(function(){
+    //toggleClass切换，点一下就添加或者删除反复变换
     $('#top .detail .other').toggleClass("open");
     $(this).toggleClass('active');
  })

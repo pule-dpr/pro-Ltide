@@ -34,6 +34,7 @@ $('.registerbtn>button').click(function(){
 })
 /*******************效果******************* */
 $(`[data-btn=tab]`).click(function(){
+    //除了当前元素的所有兄弟元素siblings()
         $(this).addClass('check').siblings().removeClass('check')
         var id=$(this).attr('data-divid');
         $(`#${id}`).addClass('active').siblings().removeClass('active');

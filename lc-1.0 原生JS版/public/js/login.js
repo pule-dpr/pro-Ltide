@@ -1,6 +1,7 @@
 /*******************login**ajax******************* */
 var login=document.querySelector('.loginbtn>button');
 login.onclick=function(){
+    //表单id的value就是输入的值
     var $uname=uname.value;
     var $upwd=upwd.value;
     ajax({
@@ -35,11 +36,17 @@ register.onclick=function(){
     });
 }
 /*******************效果******************* */
+//找到dom元素(登录注册的tab按钮)
 var tabs=document.querySelectorAll(`[data-btn=tab]`);
+//遍历
 for(var tab of tabs){
+    //单独为每个tab按钮添加点击事件
     tab.onclick=function(){
+        //class变为check
         this.className='check'
+        //取自定义属性中的值
         var id=this.dataset.divid;
+        //根据id找对应div
         var div=document.getElementById(id);
         if(div.className=='logincontent'){
             div.classList.add('active');
