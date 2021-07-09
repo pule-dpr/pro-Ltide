@@ -1,5 +1,6 @@
 <template>
    <div id="index">
+     <my-header></my-header>
             <!--轮播图-->
             <div class="lunbo">
             <my-carousel></my-carousel>
@@ -9,29 +10,29 @@
               <div class="row">
                 <div class="column-left fl">
                   <div>
-                      <img src="/img/show/2.jpg" alt="">
-                      <img class="cover-img1" src="/img/show/2.1.jpg" alt="">
+                      <img src="../images/show/2.jpg" alt="">
+                      <img class="cover-img1" src="../images/show/2.1.jpg" alt="">
                   </div>
                   <div>
                     <div>
-                      <img src="/img/show/6.png" alt="">
+                      <img src="../images/show/6.png" alt="">
                     </div>
                     <div>
-                      <img src="/img/show/4.jpg" alt="">
-                      <img class="cover-img2" src="/img/show/4.1.jpg" alt="">
+                      <img src="../images/show/4.jpg" alt="">
+                      <img class="cover-img2" src="../images/show/4.1.jpg" alt="">
                     </div>
                   </div>
                   <div>
-                    <img class="big" src="/img/show/5.jpg" alt="">
+                    <img class="big" src="../images/show/5.jpg" alt="">
                   </div>
                 </div>
                 <div class="column-right fr">
                   <div>
-                    <img src="/img/show/6.png" alt="">
+                    <img src="../images/show/6.png" alt="">
                   </div>
                   <div>
-                    <img src="/img/show/3.jpg" alt="">
-                    <img class="cover-img" src="/img/show/3.1.jpg" alt="">
+                    <img src="../images/show/3.jpg" alt="">
+                    <img class="cover-img" src="../images/show/3.1.jpg" alt="">
                   </div>
                 </div>
               </div>
@@ -39,7 +40,7 @@
             <!--关于我们-->
             <div class="about-us">
               <div>
-                <img src="/img/show/6.png" alt="">
+                <img src="../images/show/6.png" alt="">
                 <a href="" class="dou">关于我们 >></a>
               </div>
             </div>
@@ -141,7 +142,7 @@
             <!--结尾ending-->
             <div class="ending">
               <div>
-                <img src="/img/ending.jpg" alt="">
+                <img src="../images/ending.jpg" alt="">
               </div>
               <div>
                 <div>
@@ -154,6 +155,7 @@
                   </p>
               </div>
             </div>
+            <my-footer></my-footer>
       </div>
 </template>
 <style>
@@ -448,8 +450,11 @@
 </style>
 <script>
 // import {getpro} from '../../public/js/apis/indexproduct.js'
+import MyCarousel from '../components/IndexCarousel.vue'
+import MyHeader from '../components/MyHeader.vue'
+import MyFooter from '../components/MyFooter.vue'
 export default {
- 
+    components:{MyCarousel,MyHeader,MyFooter},
     data(){
         return{
           p1:[],
