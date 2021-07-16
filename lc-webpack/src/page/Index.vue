@@ -490,20 +490,20 @@ export default {
       },
     },
     mounted(){
-      getpro().then(result=>{
-        this.p1=result.slice(0,4);
-        this.p2=result.slice(4,8);
-        this.p3=result.slice(8,12);
-      for(var i=0;i<result.length;i++){
-        var objxh={};
-        var objsc={};
-        objxh["btnxh"+result[i].pid]="";
-        objsc["btnsc"+result[i].pid]="";
-        this.proxh.push(objxh);
-        this.prosc.push(objsc);
-      }
-      console.log(this.prosc);
-      });
+    //   getpro().then(result=>{
+    //     this.p1=result.slice(0,4);
+    //     this.p2=result.slice(4,8);
+    //     this.p3=result.slice(8,12);
+    //   for(var i=0;i<result.length;i++){
+    //     var objxh={};
+    //     var objsc={};
+    //     objxh["btnxh"+result[i].pid]="";
+    //     objsc["btnsc"+result[i].pid]="";
+    //     this.proxh.push(objxh);
+    //     this.prosc.push(objsc);
+    //   }
+    //   console.log(this.prosc);
+    //   });
     },
 }
 </script>

@@ -4,7 +4,7 @@
         <nav class="">
             <!--logo-->
             <img src="../images/logo/L潮logo6.png" alt="" class="logo">
-            <div class="notlogin fr" v-if="islogin==0">
+            <div class="notlogin fr" v-if="!login">
                 <ul class="loginnav clearfix">
                     <li>|</li>
                     <li @click="register('reg')"><router-link to="/login">注册</router-link></li>
@@ -478,18 +478,18 @@
 }
 </style>
 <script>
-// import {mapState,mapMutations} from 'vuex'
+import {mapState,mapMutations} from 'vuex'
 // // import Utils from '../../public/js/util'
 export default {
-//   computed:{
+  computed:{
 //     //数组方式不能改名
-//     ...mapState(['islogin','info']),
+    ...mapState(['login','userInfo']),
 //     //对象方式可以改名
 //     // ...mapState({
 //     //   ag1:"age",
 //     //   sex1:"ssex"
 //     //   }),
-//   },
+  },
   data(){
     return{
 
@@ -500,8 +500,11 @@ export default {
       // Utils.$emit('demo',msg);
     },
     //将$store中的mutations中方法导入为自己的methods
-    // ...mapMutations(["logoutMutations"]),
+    ...mapMutations([
+      'USER_LOGIN'
+    ]),
     logout(){
+      console.log(this.login);
       // this.logoutMutations();
       // localStorage.clear();
     },

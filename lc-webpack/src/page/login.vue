@@ -188,24 +188,28 @@
 /*******************************************************************************/
 </style>
 <script>
-// import {getLogin,getreg} from '../../public/js/apis/user.js'
-// import Utils from '../../public/js/util'
+import {getLogin} from '../service/getdata.js'
+import {mapState,mapMutations} from 'vuex'
 import MyHeader from '../components/MyHeader.vue'
 import MyFooter from '../components/MyFooter.vue'
 export default {
      components:{MyHeader,MyFooter},
     data(){
         return{
-            log:true,
-            reg:false,
-            isAgree:false,
-            uname:"",
-            upwd:"",
-            aginupwd:"",
-            phone:"",
+            userInfo:null, //用户信息
+            log:true,//控制是否显示登录tab页
+            reg:false,//控制是否显示注册tab页
+            isAgree:false,//是否勾选我已同意
+            uname:null,//用户名
+            upwd:null,//密码
+            aginupwd:null,//确认密码
+            phone:null,//电话
         }
     },
     methods:{
+        ...mapMutations([
+            'USER_LOGIN'
+        ]),
         chose(n){
             if(n=="log"){
                 this.log=true;
@@ -218,20 +222,10 @@ export default {
         Agree(){
             this.isAgree=this.isAgree==true?false:true;
         },
-        login(){
-            getLogin(this.uname,this.upwd).then(result=>{ 
-                console.log(result);
-                if(result.length>0){
-                    //提交mutations，以改变用户登录状态
-                    this.$store.commit('loginMutations',result[0]);
-                    //将用户信息和登录状态再存一份到webstoreage
-                    localStorage.setItem("islogin",1);
-                    localStorage.setItem("info",JSON.stringify(result[0]));
-                    this.$router.push("/");
-                }else{
-                    alert("用户名或密码错误");
-                }
-            });
+        async login(){
+            this.userInfo=await getLogin(this.uname,this.upwd);
+            console.log(this.userInfo);
+            
         },
         register(){
             //确认密码是否正确正确

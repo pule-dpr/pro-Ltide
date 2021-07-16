@@ -38,7 +38,7 @@ router.get('/v1/detail/:uid',(req,res)=>{
     var sql='select * from lc_user where uid=?';
     pool.query(sql,[$uid],(err,result)=>{
         if(err) throw err;
-        if(result.affectedRows>0){
+        if(result.length>0){
             res.send(result);
         }else{
             res.send('0');
