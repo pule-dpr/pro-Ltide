@@ -1,6 +1,9 @@
 //引入常量
-import { USER_LOGIN } from "./mutation-types";
-import {setStore, getStore} from '../config/mUtils'
+import { 
+    USER_LOGIN,
+    OUT_LOGIN    
+} from "./mutation-types";
+import {setStore, getStore,removeStore} from '../config/mUtils'
 export default{
     //用户登录
     //我们可以使用es2015的风格计算属性命名功能来使用一个常量作为函数名
@@ -10,6 +13,11 @@ export default{
         state.userInfo = info;
         state.login = true;
         // 调用存储localStorage函数
-        setStore('user_id',info.user_id);
+        setStore('uid',info.uid);
+    },
+    [OUT_LOGIN](state,info){
+        state.userInfo = {};
+        state.login = false;
+        removeStore('uid');
     }
 }

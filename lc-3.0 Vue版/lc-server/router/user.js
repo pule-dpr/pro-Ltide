@@ -26,7 +26,7 @@ router.post('/v1/login',(req,res)=>{
     pool.query(sql,[$uname,$upwd],(err,result)=>{
         if(err) throw err;
         if(result.length>0){
-            res.send(result);
+            res.send(result[0]);
         }else{
             res.send('0');
         }

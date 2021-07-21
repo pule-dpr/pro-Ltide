@@ -501,10 +501,11 @@ export default {
     },
     //将$store中的mutations中方法导入为自己的methods
     ...mapMutations([
-      'USER_LOGIN'
+      'OUT_LOGIN'
     ]),
     logout(){
       console.log(this.login);
+      this.OUT_LOGIN(this.userInfo.uid)
       // this.logoutMutations();
       // localStorage.clear();
     },

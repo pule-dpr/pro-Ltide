@@ -223,9 +223,17 @@ export default {
             this.isAgree=this.isAgree==true?false:true;
         },
         async login(){
+            if(!this.uname||!this.upwd){
+                alert("用户名或密码为必填项");
+            }
             this.userInfo=await getLogin(this.uname,this.upwd);
-            console.log(this.userInfo);
-            
+            if(!this.userInfo){
+                alert("用户名或密码错误");
+            }else{
+                this.USER_LOGIN(this.userInfo);
+                this.$router.push('/');
+            }
+            console.log(this.userInfo)
         },
         register(){
             //确认密码是否正确正确
@@ -250,10 +258,10 @@ export default {
         }
     },
     mounted(){
-       Utils.$on('demo',(msg)=>{
-           this.$router.push("/login");
-           this.chose(msg);
-       })
+    //    Utils.$on('demo',(msg)=>{
+    //        this.$router.push("/login");
+    //        this.chose(msg);
+    //    })
     }
 }
 </script>
