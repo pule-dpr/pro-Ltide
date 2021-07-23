@@ -10,10 +10,9 @@ export default{
     //state为默认参数，不用传入
     [USER_LOGIN](state,info){
         //更改vuex中store中存入的state变量
-        state.userInfo = info;
         state.login = true;
+        state.userToken = info["token"]
         // 调用存储localStorage函数
-        setStore('uid',info.uid);
     },
     [OUT_LOGIN](state,info){
         state.userInfo = {};

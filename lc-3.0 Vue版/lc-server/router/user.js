@@ -1,6 +1,7 @@
 const express=require('express');
 //导入连接池
 const pool=require('../pool.js');
+const jwt = require('jsonwebtoken');
 //创建路由器
 const router=express.Router();
 //添加用户注册路由
@@ -26,9 +27,25 @@ router.post('/v1/login',(req,res)=>{
     pool.query(sql,[$uname,$upwd],(err,result)=>{
         if(err) throw err;
         if(result.length>0){
-            res.send(result[0]);
+             // 把userId和其它相关信息加密成一个token,返回给前端
+            let userInfo = {
+                userId: result[0].uid,
+            }
+        // 生成token
+        let token = jwt.sign(userInfo, "mouchun.com", {
+            // expiresIn: "1000h"
+            expiresIn: "10s"
+        });
+            res.send({
+                code:200,
+                msg:"登录成功",
+                token:token
+            });
         }else{
-            res.send('0');
+            res.send({
+                code:0,
+                msg:"登录失败",
+            });
         }
     });
 });

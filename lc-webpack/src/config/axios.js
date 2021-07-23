@@ -1,6 +1,7 @@
 import axios from "axios";
 import qs from 'qs'
 import { baseUrl, routerMode } from "./env";
+import store from '../store'
 //设置请求超时
 axios.defaults.timeout=10000;
 //设置post，put的请求头信息
@@ -10,8 +11,13 @@ axios.defaults.headers.put['Content-Type']='application/x-www-form-urlencoded;ch
 //请求拦截
    axios.interceptors.request.use(
         config => {
-        return config
-        },
+          console.log('config',config);
+          // 从vuex读取token的值,给请求头添加laohu-token
+          if (store.state.userToken) {
+              config.headers['user-token'] = store.state.userToken;
+          }
+          return config
+      },
         err => {
         return Promise.reject(err)
         })

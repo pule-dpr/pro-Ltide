@@ -449,7 +449,7 @@
     }
 </style>
 <script>
-// import {getpro} from '../../public/js/apis/indexproduct.js'
+import {getIndex} from '../service/getdata.js'
 import MyCarousel from '../components/IndexCarousel.vue'
 import MyHeader from '../components/MyHeader.vue'
 import MyFooter from '../components/MyFooter.vue'
@@ -490,6 +490,9 @@ export default {
       },
     },
     mounted(){
+      getIndex().then(result=>{
+        console.log(result);
+      });
     //   getpro().then(result=>{
     //     this.p1=result.slice(0,4);
     //     this.p2=result.slice(4,8);
